@@ -7,7 +7,7 @@ import { AboutCta } from "@/components/sections/about/about-cta";
 export const metadata: Metadata = {
   title: "Sobre",
   description:
-    "A história por trás da Stratos.dev — da 42Lisboa ao código que resolve problemas reais de negócio.",
+    "A história por trás da Flywheel.dev — da 42Lisboa ao código que resolve problemas reais de negócio.",
 };
 
 export default function SobrePage() {

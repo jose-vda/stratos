@@ -3,7 +3,7 @@
 import * as React from "react";
 import { dict, type Lang, type Dict } from "@/lib/i18n";
 
-const STORAGE_KEY = "stratos:lang";
+const STORAGE_KEY = "flywheel:lang";
 
 type LanguageContextValue = {
   lang: Lang;
@@ -30,12 +30,16 @@ export function LanguageProvider({ children }: { children: React.ReactNode }) {
     if (!initial && typeof navigator !== "undefined") {
       initial = navigator.language?.toLowerCase().startsWith("pt") ? "pt" : "en";
     }
+    // Hidratação client-only: a preferência salva/idioma do navegador só
+    // existe no cliente, então o ajuste precisa acontecer pós-mount (1 render
+    // extra é o custo esperado, não um loop em cascata).
+    // eslint-disable-next-line react-hooks/set-state-in-effect
     if (initial && initial !== "pt") setLangState(initial);
   }, []);
 
   // Mantém <html lang> em sincronia para acessibilidade/SEO.
   React.useEffect(() => {
-    document.documentElement.lang = lang === "pt" ? "pt-BR" : "en";
+    document.documentElement.lang = lang === "pt" ? "pt-PT" : "en";
   }, [lang]);
 
   const setLang = React.useCallback((next: Lang) => {

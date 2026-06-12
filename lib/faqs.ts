@@ -12,12 +12,12 @@ const faqsByLang: Record<Lang, FaqItem[]> = {
     {
       question: "Como funciona o diagnóstico gratuito?",
       answer:
-        "É uma conversa de 30 a 45 minutos, sem compromisso. Você conta o que está acontecendo no seu negócio e identificamos juntos se — e onde — tecnologia pode ajudar. Não há apresentação comercial, nem letra miúda. Respondemos em até 24h após o contato.",
+        "É uma conversa de 30 a 45 minutos, sem compromisso. Conta-me o que se passa no seu negócio e identificamos juntos se — e onde — a tecnologia pode ajudar. Não há apresentação comercial, nem letra miúda. Respondemos em até 24h após o contacto.",
     },
     {
       question: "Qual o investimento necessário?",
       answer:
-        "Depende do escopo. Projetos simples começam a partir de R$ 3.000 e projetos mais complexos podem chegar a R$ 50.000 ou mais. O orçamento detalhado é entregue na fase de Arquitetura, após o diagnóstico — sem surpresas depois.",
+        "Depende do âmbito. Projetos simples começam a partir de 1.500 € e projetos mais complexos podem chegar a 25.000 € ou mais. O orçamento detalhado é entregue na fase de Arquitetura, após o diagnóstico — sem surpresas depois.",
     },
     {
       question: "Quanto tempo leva um projeto?",
@@ -25,24 +25,24 @@ const faqsByLang: Record<Lang, FaqItem[]> = {
         "Um site ou landing page leva de 2 a 4 semanas. Aplicações web e business hubs ficam entre 4 e 12 semanas, dependendo da complexidade. Automações variam de 1 a 6 semanas. O cronograma exato é definido na proposta.",
     },
     {
-      question: "Preciso ter CNPJ ou ser uma empresa grande?",
+      question: "Preciso de ter empresa aberta ou ser uma empresa grande?",
       answer:
-        "Não. Trabalhamos com profissionais autônomos, MEIs, startups e empresas de todos os tamanhos. O que importa é o problema a resolver, não o tamanho da empresa.",
+        "Não. Trabalhamos com profissionais independentes (recibos verdes), startups e empresas de todas as dimensões. O que importa é o problema a resolver, não a dimensão da empresa.",
     },
     {
-      question: "Vocês trabalham com qualquer setor?",
+      question: "Trabalham com qualquer setor?",
       answer:
-        "Sim. Já entregamos projetos para saúde, educação, varejo, serviços, tecnologia e mais. Nosso processo de diagnóstico garante que entendemos a sua área antes de propor qualquer solução.",
+        "Sim. Já entregámos projetos para saúde, educação, retalho, serviços, tecnologia e mais. O nosso processo de diagnóstico garante que percebemos a sua área antes de propor qualquer solução.",
     },
     {
       question: "Como acompanho o progresso do meu projeto?",
       answer:
-        "Você recebe previews navegáveis toda semana e tem acesso direto a um canal de comunicação (WhatsApp ou Slack). O código fica em um repositório seu desde o início — nada de black box.",
+        "Recebe previews navegáveis todas as semanas e tem acesso direto a um canal de comunicação (WhatsApp ou Slack). O código fica num repositório seu desde o início — nada de black box.",
     },
     {
       question: "O que acontece após a entrega?",
       answer:
-        "30 dias de suporte estão inclusos em todos os projetos. Após esse período, oferecemos planos de manutenção e impulsionamento para quem quer continuar evoluindo a solução com acompanhamento de métricas e otimizações contínuas.",
+        "30 dias de suporte estão incluídos em todos os projetos. Após esse período, oferecemos planos de manutenção e impulsionamento para quem quer continuar a evoluir a solução com acompanhamento de métricas e otimizações contínuas.",
     },
   ],
   en: [
@@ -54,7 +54,7 @@ const faqsByLang: Record<Lang, FaqItem[]> = {
     {
       question: "What's the investment involved?",
       answer:
-        "It depends on the scope. Simple projects start from around R$ 3,000 and more complex ones can reach R$ 50,000 or more. The detailed budget is delivered in the Architecture phase, after the diagnosis — no surprises later.",
+        "It depends on the scope. Simple projects start from around €1,500 and more complex ones can reach €25,000 or more. The detailed budget is delivered in the Architecture phase, after the diagnosis — no surprises later.",
     },
     {
       question: "How long does a project take?",

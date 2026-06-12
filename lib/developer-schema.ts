@@ -4,7 +4,7 @@ import { z } from "zod";
 export const developerSeniorities = [
   { value: "junior", label: "Júnior" },
   { value: "pleno", label: "Pleno" },
-  { value: "senior", label: "Sênior" },
+  { value: "senior", label: "Sénior" },
 ] as const;
 
 export const developerSeniorityValues = developerSeniorities.map((s) => s.value) as [
@@ -13,8 +13,8 @@ export const developerSeniorityValues = developerSeniorities.map((s) => s.value)
 ];
 
 export const developerAvailabilities = [
-  { value: "parttime", label: "Meio período" },
-  { value: "fulltime", label: "Tempo integral" },
+  { value: "parttime", label: "Tempo parcial" },
+  { value: "fulltime", label: "Tempo inteiro" },
   { value: "pontual", label: "Projetos pontuais" },
 ] as const;
 
@@ -27,13 +27,13 @@ export const developerSchema = z.object({
   name: z
     .string()
     .trim()
-    .min(2, "Digite seu nome completo")
+    .min(2, "Introduza o seu nome completo")
     .max(120, "Nome muito longo"),
   email: z.string().trim().email("E-mail inválido"),
   phone: z
     .string()
     .trim()
-    .min(8, "Digite um telefone/WhatsApp válido")
+    .min(8, "Introduza um telefone/WhatsApp válido")
     .max(30, "Telefone muito longo"),
   seniority: z.enum(developerSeniorityValues, {
     message: "Selecione a sua senioridade",
@@ -44,17 +44,17 @@ export const developerSchema = z.object({
   stack: z
     .string()
     .trim()
-    .min(3, "Conta a sua stack principal")
+    .min(3, "Indique a sua stack principal")
     .max(300, "Stack muito longa"),
   link: z
     .string()
     .trim()
-    .min(4, "Compartilhe um portfólio ou GitHub")
+    .min(4, "Partilhe um portfólio ou GitHub")
     .max(200, "Link muito longo"),
   message: z
     .string()
     .trim()
-    .min(10, "Conta um pouco mais (mín. 10 caracteres)")
+    .min(10, "Conte-me um pouco mais (mín. 10 caracteres)")
     .max(2000, "Mensagem muito longa"),
 });
 

@@ -23,7 +23,7 @@ const statsByLang: Record<Lang, StatItem[]> = {
   pt: [
     { value: 14, suffix: "+", label: "Projetos entregues", sublabel: "Sites, apps, hubs e automações" },
     { value: 8, suffix: "", label: "Clientes ativos", sublabel: "De startups a empresas estabelecidas" },
-    { value: 3, suffix: "", label: "Anos de mercado", sublabel: "Entregando tecnologia com clareza" },
+    { value: 3, suffix: "", label: "Anos de mercado", sublabel: "A entregar tecnologia com clareza" },
     { value: 100, suffix: "%", label: "Entregues no prazo", sublabel: "Sem surpresas no meio do caminho" },
   ],
   en: [
@@ -70,7 +70,7 @@ export function Stats() {
   const lang = useLang();
   const stats = statsByLang[lang];
   return (
-    <section className="relative overflow-hidden border-t border-white/5 bg-[oklch(0.10_0.04_280)] py-20 md:py-28">
+    <section className="relative overflow-hidden border-t border-white/5 bg-[oklch(0.10_0.04_280)] py-24 md:py-32">
       <div
         aria-hidden
         className="bg-aurora pointer-events-none absolute left-1/2 top-0 -z-0 h-80 w-full -translate-x-1/2 opacity-50"
@@ -80,7 +80,7 @@ export function Stats() {
         className="bg-dot-dark pointer-events-none absolute inset-0 -z-0"
       />
       <div className="relative z-10 mx-auto max-w-6xl px-6">
-        <p className="mb-10 text-center font-mono text-xs uppercase tracking-widest text-white/40">
+        <p className="mb-10 text-center font-mono text-xs uppercase tracking-widest text-white/60">
           {t.stats.kicker}
         </p>
         <div className="grid grid-cols-2 gap-8 md:grid-cols-4 md:gap-0">
@@ -101,7 +101,7 @@ export function Stats() {
               <span className="mt-1 text-sm font-medium text-white">
                 {stat.label}
               </span>
-              <span className="text-xs text-white/50">
+              <span className="text-xs text-white/65">
                 {stat.sublabel}
               </span>
             </motion.div>

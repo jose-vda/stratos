@@ -11,6 +11,11 @@ export const HERO_VIDEOS = [
   "/hero-bg-2.mp4",
   "/hero-bg-3.mp4",
   "/hero-bg-4.mp4",
+  "/hero-bg-5.mp4",
+  "/hero-bg-6.mp4",
+  "/hero-bg-7.mp4",
+  "/hero-bg-8.mp4",
+  "/hero-bg-9.mp4",
 ];
 
 const posterFor = (src: string) => src.replace(/\.mp4$/, ".jpg");
@@ -43,10 +48,15 @@ export function VideoBackground({
   const reduced = useReducedMotion();
   const [videoIndex, setVideoIndex] = React.useState<number | null>(null);
   const [canPlay, setCanPlay] = React.useState(false);
+  // Se o vídeo falhar (404 / codec), desistimos dele e ficamos só no poster.
+  const [failed, setFailed] = React.useState(false);
   // Por padrão não carregamos vídeo; só liberamos se a conexão permitir.
   const [allowVideo, setAllowVideo] = React.useState(false);
 
   React.useEffect(() => {
+    // Sorteio + detecção de conexão são client-only e rodam uma vez no mount
+    // (fazer no servidor causaria mismatch de hidratação). 1 render extra.
+    // eslint-disable-next-line react-hooks/set-state-in-effect
     setVideoIndex(Math.floor(Math.random() * HERO_VIDEOS.length));
 
     // Respeita economia de dados e redes lentas (2g/3g) — fica no poster.
@@ -65,8 +75,8 @@ export function VideoBackground({
 
   const videoSrc = videoIndex === null ? null : HERO_VIDEOS[videoIndex];
   const poster = videoSrc ? posterFor(videoSrc) : null;
-  // Sob reduced-motion ou conexão lenta, mostramos apenas o poster estático.
-  const showVideo = !!videoSrc && allowVideo && !reduced;
+  // Sob reduced-motion, conexão lenta ou falha de carregamento, ficamos só no poster.
+  const showVideo = !!videoSrc && allowVideo && !reduced && !failed;
 
   return (
     <>
@@ -74,7 +84,7 @@ export function VideoBackground({
       <div
         aria-hidden
         className="absolute inset-0 -z-30 bg-muted bg-cover bg-center"
-        style={poster ? { backgroundImage: `url(${poster})` } : undefined}
+        style={poster ? { backgroundImage: `url('${poster}')` } : undefined}
       />
 
       {showVideo && (
@@ -88,6 +98,7 @@ export function VideoBackground({
           preload="metadata"
           poster={poster ?? undefined}
           onCanPlay={() => setCanPlay(true)}
+          onError={() => setFailed(true)}
           className={cn(
             "pointer-events-none absolute inset-0 -z-30 h-full w-full object-cover transition-opacity duration-700 ease-out",
             canPlay ? "opacity-100" : "opacity-0",

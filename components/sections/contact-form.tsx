@@ -166,9 +166,11 @@ export function ContactForm() {
           <Input
             id="name"
             type="text"
+            required
             autoComplete="name"
             placeholder={tf.namePh}
             aria-invalid={!!errors.name}
+            aria-describedby={errors.name ? "name-error" : undefined}
             className={fieldBaseClass}
             {...register("name", {
               onBlur: () => trigger("name"),
@@ -193,6 +195,7 @@ export function ContactForm() {
             autoComplete="organization"
             placeholder={tf.companyPh}
             aria-invalid={!!errors.company}
+            aria-describedby={errors.company ? "company-error" : undefined}
             className={fieldBaseClass}
             {...register("company")}
           />
@@ -208,9 +211,11 @@ export function ContactForm() {
         <Input
           id="email"
           type="email"
+          required
           autoComplete="email"
           placeholder={tf.emailPh}
           aria-invalid={!!errors.email}
+          aria-describedby={errors.email ? "email-error" : undefined}
           className={fieldBaseClass}
           {...register("email", {
             onBlur: () => trigger("email"),
@@ -236,6 +241,7 @@ export function ContactForm() {
           <SelectTrigger
             id="projectType"
             aria-invalid={!!errors.projectType}
+            aria-describedby={errors.projectType ? "projectType-error" : undefined}
             className={cn(fieldBaseClass, "w-full justify-between")}
           >
             <SelectValue placeholder={tf.projectTypePh} />
@@ -259,8 +265,10 @@ export function ContactForm() {
         <Textarea
           id="message"
           rows={5}
+          required
           placeholder={tf.messagePh}
           aria-invalid={!!errors.message}
+          aria-describedby={errors.message ? "message-error" : undefined}
           className="min-h-32 rounded-lg border-border bg-background text-[15px] transition-shadow focus-visible:ring-3 focus-visible:ring-ring/40 md:text-sm"
           {...register("message", {
             onBlur: () => trigger("message"),
@@ -339,6 +347,7 @@ function Field({
       <AnimatePresence>
         {error && (
           <motion.p
+            id={`${htmlFor}-error`}
             initial={{ opacity: 0, y: -4 }}
             animate={{ opacity: 1, y: 0 }}
             exit={{ opacity: 0, y: -4 }}

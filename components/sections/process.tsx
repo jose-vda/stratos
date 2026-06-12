@@ -28,6 +28,7 @@ import {
 import { cn } from "@/lib/utils";
 import type { Lang } from "@/lib/i18n";
 import { useT, useLang } from "@/components/language-provider";
+import { useFinePointer } from "@/lib/use-fine-pointer";
 
 type Step = {
   icon: React.ComponentType<{ className?: string }>;
@@ -44,17 +45,17 @@ const stepsByLang: Record<Lang, Step[]> = {
   pt: [
     {
       icon: Compass,
-      title: "Contato",
+      title: "Contacto",
       short: "Conversa inicial sem compromisso.",
-      long: "Tudo começa com uma conversa franca sobre o seu negócio. Sem apresentação comercial chata, sem letra miúda. O objetivo é entender o que está te impedindo de crescer e se a tecnologia tem um papel nisso.",
+      long: "Tudo começa com uma conversa franca sobre o seu negócio. Sem apresentação comercial chata, sem letra miúda. O objetivo é perceber o que o está a impedir de crescer e se a tecnologia tem um papel nisso.",
       deliverables: ["Reunião de 30-45 min", "Diagnóstico inicial gratuito", "Resposta em até 24h", "Zero compromisso"],
       duration: "1-2 dias",
     },
     {
       icon: Search,
       title: "Diagnóstico",
-      short: "Identificamos gargalos e oportunidades.",
-      long: "Aprofundamos o entendimento: processos atuais, ferramentas em uso, gargalos, e principalmente o que está custando tempo ou dinheiro. Identificamos onde tecnologia gera retorno claro — e onde não vale a pena.",
+      short: "Identificamos estrangulamentos e oportunidades.",
+      long: "Aprofundamos o entendimento: processos atuais, ferramentas em uso, estrangulamentos, e sobretudo o que está a custar tempo ou dinheiro. Identificamos onde a tecnologia gera retorno claro — e onde não vale a pena.",
       deliverables: ["Mapa dos processos atuais", "Lista priorizada de oportunidades", "Estimativa de impacto", "Indicação clara: vale ou não vale?"],
       duration: "3-7 dias",
     },
@@ -62,7 +63,7 @@ const stepsByLang: Record<Lang, Step[]> = {
       icon: Boxes,
       title: "Arquitetura",
       short: "Desenhamos a solução técnica ideal.",
-      long: "Desenhamos a solução completa: escopo, stack tecnológica, fluxos de dados, integrações e marcos do projeto. Você recebe uma proposta clara com prazos e investimento — sem surpresas no meio do caminho.",
+      long: "Desenhamos a solução completa: âmbito, stack tecnológica, fluxos de dados, integrações e marcos do projeto. Recebe uma proposta clara com prazos e investimento — sem surpresas no meio do caminho.",
       deliverables: ["Documento de arquitetura", "Stack tecnológica justificada", "Cronograma com marcos", "Orçamento detalhado"],
       duration: "5-10 dias",
     },
@@ -70,24 +71,24 @@ const stepsByLang: Record<Lang, Step[]> = {
       icon: Code2,
       title: "Desenvolvimento",
       short: "Construímos com qualidade de produção.",
-      long: "Construímos com qualidade de produção desde o primeiro commit. Você acompanha o progresso em tempo real, com previews semanais e canal direto para feedback. Iteração rápida, sem black box.",
+      long: "Construímos com qualidade de produção desde o primeiro commit. Acompanha o progresso em tempo real, com previews semanais e canal direto para feedback. Iteração rápida, sem black box.",
       deliverables: ["Previews semanais navegáveis", "Canal direto (WhatsApp/Slack)", "Código versionado em repo seu", "Testes automatizados"],
       duration: "2-12 semanas",
     },
     {
       icon: Rocket,
       title: "Implementação",
-      short: "Deploy, go-live e treinamento do time.",
-      long: "Levamos a solução para produção com rigor: checklist de go-live, validação em ambiente real e acompanhamento nos primeiros dias críticos. Treinamos o seu time para que todos saibam usar e tirar o máximo da ferramenta.",
-      deliverables: ["Deploy em produção", "Checklist de go-live", "Treinamento do time", "Documentação técnica e de uso"],
+      short: "Deploy, go-live e formação da equipa.",
+      long: "Levamos a solução para produção com rigor: checklist de go-live, validação em ambiente real e acompanhamento nos primeiros dias críticos. Formamos a sua equipa para que todos saibam usar e tirar o máximo da ferramenta.",
+      deliverables: ["Deploy em produção", "Checklist de go-live", "Formação da equipa", "Documentação técnica e de uso"],
       duration: "1-2 semanas",
     },
     {
       icon: TrendingUp,
       title: "Impulsionamento",
-      short: "Monitoramento, métricas e crescimento contínuo.",
-      long: "Implementar é o começo, não o fim. Acompanhamos as métricas de uso e impacto, identificamos gargalos pós-lançamento e otimizamos continuamente. O objetivo é garantir que a solução entregue os resultados prometidos — e vá além deles.",
-      deliverables: ["30 dias de suporte incluso", "Acompanhamento de métricas", "Otimizações pós-lançamento", "Relatório de impacto"],
+      short: "Monitorização, métricas e crescimento contínuo.",
+      long: "Implementar é o começo, não o fim. Acompanhamos as métricas de uso e impacto, identificamos estrangulamentos pós-lançamento e otimizamos continuamente. O objetivo é garantir que a solução entrega os resultados prometidos — e vai além deles.",
+      deliverables: ["30 dias de suporte incluído", "Acompanhamento de métricas", "Otimizações pós-lançamento", "Relatório de impacto"],
       duration: "30+ dias",
     },
   ],
@@ -145,18 +146,6 @@ const stepsByLang: Record<Lang, Step[]> = {
 
 function useSteps() {
   return stepsByLang[useLang()];
-}
-
-function useFinePointer() {
-  const [fine, setFine] = React.useState(false);
-  React.useEffect(() => {
-    const mql = window.matchMedia("(pointer: fine)");
-    setFine(mql.matches);
-    const onChange = (e: MediaQueryListEvent) => setFine(e.matches);
-    mql.addEventListener("change", onChange);
-    return () => mql.removeEventListener("change", onChange);
-  }, []);
-  return fine;
 }
 
 const deliverablesContainer: Variants = {
@@ -515,7 +504,7 @@ function StepListItem({
           />
           <span
             className={cn(
-              "truncate text-sm font-medium transition-colors md:text-[15px]",
+              "line-clamp-2 text-sm font-medium transition-colors md:text-[15px]",
               active
                 ? "text-foreground"
                 : "text-muted-foreground group-hover:text-foreground",
@@ -526,7 +515,7 @@ function StepListItem({
         </div>
         <p
           className={cn(
-            "mt-0.5 truncate text-xs transition-colors md:text-sm",
+            "mt-0.5 line-clamp-2 text-xs transition-colors md:text-sm",
             active ? "text-muted-foreground" : "text-muted-foreground/70",
           )}
         >

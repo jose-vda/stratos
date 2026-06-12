@@ -7,10 +7,10 @@ import type { Lang } from "@/lib/i18n";
 // ─────────────────────────────────────────────────────────────────────────
 
 /** Chave usada para passar o pré-preenchimento do quiz ao formulário. */
-export const LEAD_PREFILL_KEY = "stratos:lead-prefill";
+export const LEAD_PREFILL_KEY = "flywheel:lead-prefill";
 
 /** Evento disparado quando o quiz grava um pré-preenchimento. */
-export const LEAD_PREFILL_EVENT = "stratos:lead-prefill";
+export const LEAD_PREFILL_EVENT = "flywheel:lead-prefill-ready";
 
 export type SolutionId = "site" | "app" | "hub" | "automation";
 
@@ -49,7 +49,7 @@ const quizQuestions: QuizQuestion[] = [
       },
       {
         label: {
-          pt: "Resolver um problema com um sistema sob medida",
+          pt: "Resolver um problema com um sistema à medida",
           en: "Solve a problem with a custom system",
         },
         description: {
@@ -85,7 +85,7 @@ const quizQuestions: QuizQuestion[] = [
   {
     id: "pain",
     question: {
-      pt: "O que mais te incomoda hoje?",
+      pt: "O que mais o incomoda hoje?",
       en: "What bothers you the most today?",
     },
     options: [
@@ -98,14 +98,14 @@ const quizQuestions: QuizQuestion[] = [
       },
       {
         label: {
-          pt: "Uso planilhas e ferramentas que não conversam",
+          pt: "Uso folhas de cálculo e ferramentas que não conversam",
           en: "I use spreadsheets and tools that don't talk to each other",
         },
         scores: { hub: 2, automation: 2 },
       },
       {
         label: {
-          pt: "Minha equipe perde horas em tarefas manuais",
+          pt: "A minha equipa perde horas em tarefas manuais",
           en: "My team loses hours on manual tasks",
         },
         scores: { automation: 3, hub: 1 },
@@ -122,7 +122,7 @@ const quizQuestions: QuizQuestion[] = [
   {
     id: "stage",
     question: {
-      pt: "Em que estágio está o seu negócio?",
+      pt: "Em que fase está o seu negócio?",
       en: "What stage is your business at?",
     },
     options: [
@@ -162,14 +162,14 @@ const quizQuestions: QuizQuestion[] = [
       },
       {
         label: {
-          pt: "Eu e poucas pessoas da equipe",
+          pt: "Eu e poucas pessoas da equipa",
           en: "Me and a few people on the team",
         },
         scores: { app: 2, automation: 1 },
       },
       {
         label: {
-          pt: "Vários times / a empresa toda",
+          pt: "Várias equipas / a empresa toda",
           en: "Several teams / the whole company",
         },
         scores: { hub: 3 },
@@ -202,12 +202,12 @@ const solutions: Record<SolutionId, Solution> = {
       en: "A premium digital presence that converts.",
     },
     description: {
-      pt: "Um site sob medida, rápido e otimizado para SEO, que comunica autoridade e transforma visitantes em clientes.",
+      pt: "Um site à medida, rápido e otimizado para SEO, que comunica autoridade e transforma visitantes em clientes.",
       en: "A tailor-made, fast, SEO-optimized site that conveys authority and turns visitors into clients.",
     },
     included: [
       {
-        pt: "Design sob medida, responsivo e alinhado à sua marca",
+        pt: "Design à medida, responsivo e alinhado à sua marca",
         en: "Tailor-made, responsive design aligned with your brand",
       },
       {
@@ -215,7 +215,7 @@ const solutions: Record<SolutionId, Solution> = {
         en: "SEO and performance optimization (fast loading)",
       },
       {
-        pt: "Formulários e integrações para captar contatos",
+        pt: "Formulários e integrações para captar contactos",
         en: "Forms and integrations to capture leads",
       },
       {
@@ -229,7 +229,7 @@ const solutions: Record<SolutionId, Solution> = {
     id: "app",
     projectType: "app",
     href: "#contato",
-    title: { pt: "Aplicação Web sob medida", en: "Custom Web Application" },
+    title: { pt: "Aplicação Web à medida", en: "Custom Web Application" },
     tagline: {
       pt: "A ferramenta que o seu negócio precisa e não existe pronta.",
       en: "The tool your business needs that doesn't exist off the shelf.",
@@ -240,7 +240,7 @@ const solutions: Record<SolutionId, Solution> = {
     },
     included: [
       {
-        pt: "Mapeamento do fluxo e modelagem sob medida",
+        pt: "Mapeamento do fluxo e modelação à medida",
         en: "Workflow mapping and tailor-made data modeling",
       },
       {
@@ -248,11 +248,11 @@ const solutions: Record<SolutionId, Solution> = {
         en: "Authentication, permissions and access levels",
       },
       {
-        pt: "Integrações com as ferramentas que você já usa",
+        pt: "Integrações com as ferramentas que já usa",
         en: "Integrations with the tools you already use",
       },
       {
-        pt: "Painel sob medida com os dados que importam",
+        pt: "Painel à medida com os dados que importam",
         en: "Tailor-made dashboard with the data that matters",
       },
     ],
@@ -268,7 +268,7 @@ const solutions: Record<SolutionId, Solution> = {
       en: "Your entire operation centralized in one dashboard.",
     },
     description: {
-      pt: "Um hub que unifica clientes, projetos, finanças e relatórios, com acesso multi-usuário e visão clara do negócio.",
+      pt: "Um hub que unifica clientes, projetos, finanças e relatórios, com acesso multiutilizador e visão clara do negócio.",
       en: "A hub that unifies clients, projects, finances and reports, with multi-user access and a clear view of the business.",
     },
     included: [
@@ -277,7 +277,7 @@ const solutions: Record<SolutionId, Solution> = {
         en: "Centralized clients, projects and finances",
       },
       {
-        pt: "Acesso multi-usuário com papéis e permissões",
+        pt: "Acesso multiutilizador com papéis e permissões",
         en: "Multi-user access with roles and permissions",
       },
       {
@@ -318,7 +318,7 @@ const solutions: Record<SolutionId, Solution> = {
         en: "Automated flows with triggers and notifications",
       },
       {
-        pt: "Monitoramento para garantir que tudo roda sozinho",
+        pt: "Monitorização para garantir que tudo corre sozinho",
         en: "Monitoring to make sure everything runs on its own",
       },
     ],

@@ -34,6 +34,14 @@ export function Testimonials() {
   const t = useT();
   const lang = useLang();
   const [paused, setPaused] = React.useState(false);
+  const [tabHidden, setTabHidden] = React.useState(false);
+
+  // Pausa o marquee quando a aba não está visível — evita gasto de CPU à toa.
+  React.useEffect(() => {
+    const onVisibility = () => setTabHidden(document.hidden);
+    document.addEventListener("visibilitychange", onVisibility);
+    return () => document.removeEventListener("visibilitychange", onVisibility);
+  }, []);
 
   const testimonials = getCaseTestimonials(lang);
   if (testimonials.length === 0) return null;
@@ -97,11 +105,11 @@ export function Testimonials() {
             style={{
               width: "max-content",
               animation: "marquee 28s linear infinite",
-              animationPlayState: paused ? "paused" : "running",
+              animationPlayState: paused || tabHidden ? "paused" : "running",
             }}
           >
-            {doubled.map((t, i) => (
-              <TestimonialCard key={i} {...t} />
+            {doubled.map((item, i) => (
+              <TestimonialCard key={`${item.slug}-${i}`} {...item} />
             ))}
           </div>
         </div>

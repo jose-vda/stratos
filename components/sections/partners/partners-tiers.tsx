@@ -91,7 +91,7 @@ export function PartnersTiers() {
                     "h-10 w-full px-4 text-sm",
                   )}
                 >
-                  {t.partners.startOn} {tier.name}
+                  {t.partners.startNow}
                 </Link>
               </div>
             </motion.div>

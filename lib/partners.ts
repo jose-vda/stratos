@@ -97,15 +97,15 @@ const steps: { icon: LucideIcon; title: L; description: L }[] = [
     icon: Megaphone,
     title: { pt: "Indique", en: "Refer" },
     description: {
-      pt: "Apresente a Stratos.dev para quem precisa de tecnologia sob medida. Eu cuido do diagnóstico e da proposta.",
-      en: "Introduce Stratos.dev to anyone who needs tailor-made technology. I handle the diagnosis and the proposal.",
+      pt: "Apresente a Flywheel.dev para quem precisa de tecnologia à medida. Eu cuido do diagnóstico e da proposta.",
+      en: "Introduce Flywheel.dev to anyone who needs tailor-made technology. I handle the diagnosis and the proposal.",
     },
   },
   {
     icon: Rocket,
     title: { pt: "O cliente fecha", en: "The client closes" },
     description: {
-      pt: "Quando a indicação vira projeto, a sua comissão é registrada de forma transparente.",
+      pt: "Quando a indicação vira projeto, a sua comissão é registada de forma transparente.",
       en: "When the referral becomes a project, your commission is recorded transparently.",
     },
   },
@@ -113,7 +113,7 @@ const steps: { icon: LucideIcon; title: L; description: L }[] = [
     icon: HandCoins,
     title: { pt: "Receba", en: "Get paid" },
     description: {
-      pt: "Você recebe a sua percentagem assim que o cliente efetua o pagamento. Sem burocracia.",
+      pt: "Recebe a sua percentagem assim que o cliente efetua o pagamento. Sem burocracia.",
       en: "You receive your percentage as soon as the client pays. No bureaucracy.",
     },
   },
@@ -124,7 +124,7 @@ const benefits: { icon: LucideIcon; title: L; description: L }[] = [
     icon: HandCoins,
     title: { pt: "Comissão por níveis", en: "Tiered commission" },
     description: {
-      pt: "Quanto mais você indica, maior a sua percentagem — de 10% a 20% por projeto.",
+      pt: "Quanto mais indica, maior a sua percentagem — de 10% a 20% por projeto.",
       en: "The more you refer, the higher your percentage — from 10% to 20% per project.",
     },
   },
@@ -148,8 +148,8 @@ const benefits: { icon: LucideIcon; title: L; description: L }[] = [
     icon: Megaphone,
     title: { pt: "Material de apoio", en: "Sales material" },
     description: {
-      pt: "Apresentações e exemplos prontos para você mostrar o valor da Stratos.dev.",
-      en: "Ready-made decks and examples to show the value of Stratos.dev.",
+      pt: "Apresentações e exemplos prontos para mostrar o valor da Flywheel.dev.",
+      en: "Ready-made decks and examples to show the value of Flywheel.dev.",
     },
   },
 ];
@@ -158,7 +158,7 @@ const faqs: { question: L; answer: L }[] = [
   {
     question: { pt: "Quem pode ser parceiro?", en: "Who can become a partner?" },
     answer: {
-      pt: "Agências, freelancers, consultores, criadores de conteúdo e qualquer pessoa com uma rede que precise de sites, aplicações, hubs ou automações. Não é preciso ter conhecimento técnico — você indica, eu executo.",
+      pt: "Agências, freelancers, consultores, criadores de conteúdo e qualquer pessoa com uma rede que precise de sites, aplicações, hubs ou automações. Não é preciso ter conhecimento técnico — indica, e eu executo.",
       en: "Agencies, freelancers, consultants, content creators and anyone with a network that needs websites, apps, hubs or automations. No technical knowledge required — you refer, I build.",
     },
   },
@@ -168,8 +168,8 @@ const faqs: { question: L; answer: L }[] = [
       en: "What counts as a valid referral?",
     },
     answer: {
-      pt: "Um contato que você apresenta e que ainda não estava em negociação com a Stratos.dev. Registramos a indicação no momento da candidatura/apresentação, garantindo transparência na atribuição.",
-      en: "A contact you introduce who wasn't already in talks with Stratos.dev. We log the referral at the moment of introduction, ensuring transparent attribution.",
+      pt: "Um contacto que apresenta e que ainda não estava em negociação com a Flywheel.dev. Registamos a indicação no momento da candidatura/apresentação, garantindo transparência na atribuição.",
+      en: "A contact you introduce who wasn't already in talks with Flywheel.dev. We log the referral at the moment of introduction, ensuring transparent attribution.",
     },
   },
   {
@@ -178,7 +178,7 @@ const faqs: { question: L; answer: L }[] = [
       en: "When and how do I get paid?",
     },
     answer: {
-      pt: "A comissão é paga assim que o cliente indicado efetua o pagamento do projeto. O método (PIX, transferência) é combinado na sua entrada no programa.",
+      pt: "A comissão é paga assim que o cliente indicado efetua o pagamento do projeto. O método (MB WAY, transferência bancária) é combinado na sua entrada no programa.",
       en: "Commission is paid as soon as the referred client pays for the project. The method (bank transfer, etc.) is agreed when you join the program.",
     },
   },
@@ -192,7 +192,7 @@ const faqs: { question: L; answer: L }[] = [
   {
     question: { pt: "Tem custo para participar?", en: "Is there a cost to join?" },
     answer: {
-      pt: "Não. Ser parceiro é gratuito. Você só ganha — nunca paga nada para participar do programa.",
+      pt: "Não. Ser parceiro é gratuito. Só ganha — nunca paga nada para participar no programa.",
       en: "No. Becoming a partner is free. You only earn — you never pay anything to take part.",
     },
   },
@@ -234,7 +234,7 @@ const devSteps: { icon: LucideIcon; title: L; description: L }[] = [
     icon: MessagesSquare,
     title: { pt: "Conversa rápida", en: "Quick chat" },
     description: {
-      pt: "Um papo curto para entender como você trabalha, o que gosta de construir e o seu ritmo.",
+      pt: "Uma conversa curta para perceber como trabalha, o que gosta de construir e o seu ritmo.",
       en: "A short call to understand how you work, what you like to build and your pace.",
     },
   },
@@ -242,7 +242,7 @@ const devSteps: { icon: LucideIcon; title: L; description: L }[] = [
     icon: Code2,
     title: { pt: "Entra no pool", en: "Join the pool" },
     description: {
-      pt: "Você fica no radar e eu chamo quando surge uma demanda que combina com o seu perfil.",
+      pt: "Fica no radar e eu chamo quando surge trabalho que combina com o seu perfil.",
       en: "You're on the radar and I reach out when work that matches your profile comes up.",
     },
   },
@@ -250,7 +250,7 @@ const devSteps: { icon: LucideIcon; title: L; description: L }[] = [
     icon: HandCoins,
     title: { pt: "Recebe por entrega", en: "Get paid per delivery" },
     description: {
-      pt: "Escopo e valor combinados antes de começar. Você entrega e recebe — sem burocracia.",
+      pt: "Âmbito e valor combinados antes de começar. Entrega e recebe — sem burocracia.",
       en: "Scope and rate agreed before you start. You deliver and get paid — no bureaucracy.",
     },
   },
@@ -277,7 +277,7 @@ const devStack: { icon: LucideIcon; title: L; description: L }[] = [
     icon: Database,
     title: { pt: "Dados & infra", en: "Data & infra" },
     description: {
-      pt: "Postgres/Supabase, modelagem de dados e deploy na Vercel. Bônus se manja de automações.",
+      pt: "Postgres/Supabase, modelação de dados e deploy na Vercel. Bónus se dominar automações.",
       en: "Postgres/Supabase, data modeling and deploys on Vercel. Bonus if you know automations.",
     },
   },
@@ -285,7 +285,7 @@ const devStack: { icon: LucideIcon; title: L; description: L }[] = [
     icon: ShieldCheck,
     title: { pt: "Qualidade & autonomia", en: "Quality & autonomy" },
     description: {
-      pt: "Mais importante que a stack: entregar com cuidado, comunicar bem e tocar o que assume.",
+      pt: "Mais importante que a stack: entregar com cuidado, comunicar bem e levar adiante o que assume.",
       en: "More important than the stack: delivering with care, communicating well and owning your work.",
     },
   },
@@ -294,7 +294,7 @@ const devStack: { icon: LucideIcon; title: L; description: L }[] = [
 const devBenefits: { icon: LucideIcon; title: L; description: L }[] = [
   {
     icon: Rocket,
-    title: { pt: "Projetos reais sob medida", en: "Real tailor-made projects" },
+    title: { pt: "Projetos reais à medida", en: "Real tailor-made projects" },
     description: {
       pt: "Sites, aplicações e sistemas para empresas de verdade — nada de tarefas soltas sem contexto.",
       en: "Websites, apps and systems for real businesses — no random tasks without context.",
@@ -304,7 +304,7 @@ const devBenefits: { icon: LucideIcon; title: L; description: L }[] = [
     icon: Wallet,
     title: { pt: "Pago por entrega", en: "Paid per delivery" },
     description: {
-      pt: "Valor combinado por escopo antes de começar. Sem promessa de comissão — trabalho remunerado.",
+      pt: "Valor combinado por âmbito antes de começar. Sem promessa de comissão — trabalho remunerado.",
       en: "Rate agreed per scope before you start. No commission promises — paid work.",
     },
   },
@@ -312,7 +312,7 @@ const devBenefits: { icon: LucideIcon; title: L; description: L }[] = [
     icon: Unlock,
     title: { pt: "Sem exclusividade", en: "No exclusivity" },
     description: {
-      pt: "Você mantém os seus outros trabalhos e colabora quando faz sentido. Sem mensalidade.",
+      pt: "Mantém os seus outros trabalhos e colabora quando faz sentido. Sem mensalidade.",
       en: "You keep your other work and collaborate when it makes sense. No monthly fee.",
     },
   },
@@ -330,35 +330,35 @@ const devFaqs: { question: L; answer: L }[] = [
   {
     question: { pt: "Como e quando sou pago?", en: "How and when do I get paid?" },
     answer: {
-      pt: "Combinamos o escopo e o valor antes de você começar. O pagamento é por entrega/projeto, no método e prazo acordados na sua entrada no pool.",
+      pt: "Combinamos o âmbito e o valor antes de começar. O pagamento é por entrega/projeto, no método e prazo acordados na sua entrada no pool.",
       en: "We agree on the scope and rate before you start. Payment is per delivery/project, in the method and timeline agreed when you join the pool.",
     },
   },
   {
-    question: { pt: "Que stack vocês usam?", en: "What stack do you use?" },
+    question: { pt: "Que stack usam?", en: "What stack do you use?" },
     answer: {
-      pt: "A base é React/Next.js, TypeScript, Node e Postgres/Supabase, com deploy na Vercel. Não precisa dominar tudo — diga no que você é forte.",
+      pt: "A base é React/Next.js, TypeScript, Node e Postgres/Supabase, com deploy na Vercel. Não precisa de dominar tudo — diga em que é forte.",
       en: "The base is React/Next.js, TypeScript, Node and Postgres/Supabase, deployed on Vercel. You don't need to master everything — tell me what you're strong at.",
     },
   },
   {
     question: { pt: "Preciso de exclusividade?", en: "Do I need to be exclusive?" },
     answer: {
-      pt: "Não. Você mantém os seus outros projetos e clientes. Chamo quando surge uma demanda que combina com o seu perfil e a sua disponibilidade.",
+      pt: "Não. Mantém os seus outros projetos e clientes. Chamo quando surge trabalho que combina com o seu perfil e a sua disponibilidade.",
       en: "No. You keep your other projects and clients. I reach out when work that matches your profile and availability comes up.",
     },
   },
   {
     question: { pt: "Como entro no pool?", en: "How do I join the pool?" },
     answer: {
-      pt: "Preencha a candidatura com a sua stack, senioridade e portfólio. Avalio o perfil, fazemos uma conversa rápida e você passa a fazer parte do pool.",
+      pt: "Preencha a candidatura com a sua stack, senioridade e portfólio. Avalio o perfil, fazemos uma conversa rápida e passa a fazer parte do pool.",
       en: "Fill out the application with your stack, seniority and portfolio. I review your profile, we have a quick chat and you become part of the pool.",
     },
   },
   {
     question: { pt: "Tem custo para participar?", en: "Is there a cost to join?" },
     answer: {
-      pt: "Não. Entrar no pool é gratuito e sem mensalidade. Você só é remunerado pelas entregas que fizer.",
+      pt: "Não. Entrar no pool é gratuito e sem mensalidade. Só é remunerado pelas entregas que fizer.",
       en: "No. Joining the pool is free with no monthly fee. You're only paid for the deliveries you make.",
     },
   },

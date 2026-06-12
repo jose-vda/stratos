@@ -49,8 +49,8 @@ export async function POST(request: Request) {
     voucherLabel: voucher[lang],
     whatsappUrl: whatsappLink(
       lang === "pt"
-        ? "Olá! Fiz o diagnóstico no site da Stratos.dev e gostaria de conversar sobre os próximos passos."
-        : "Hi! I took the diagnosis on the Stratos.dev site and I'd like to talk about the next steps.",
+        ? "Olá! Fiz o diagnóstico no site da Flywheel.dev e gostaria de conversar sobre os próximos passos."
+        : "Hi! I took the diagnosis on the Flywheel.dev site and I'd like to talk about the next steps.",
     ),
     calendlyUrl: siteConfig.calendlyUrl,
   });

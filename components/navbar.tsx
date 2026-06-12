@@ -71,7 +71,7 @@ export function Navbar() {
             aria-hidden
             className="bg-brand-gradient inline-block h-2.5 w-2.5 rounded-full"
           />
-          <span>Stratos</span>
+          <span>Flywheel</span>
           <span className="text-muted-foreground">.dev</span>
         </Link>
 
@@ -107,7 +107,7 @@ export function Navbar() {
             animate={{ opacity: 1, y: 0 }}
             exit={{ opacity: 0, y: -8 }}
             transition={{ duration: 0.2 }}
-            className="absolute inset-x-0 top-16 border-b border-border bg-background/95 backdrop-blur-xl md:hidden"
+            className="absolute inset-x-0 top-16 max-h-[calc(100dvh-4rem)] overflow-y-auto border-b border-border bg-background/95 backdrop-blur-xl md:hidden"
           >
             <MobileNav pathname={pathname} onNavigate={() => setOpen(false)} />
           </motion.div>

@@ -18,13 +18,13 @@ export const partnerSchema = z.object({
   name: z
     .string()
     .trim()
-    .min(2, "Digite seu nome completo")
+    .min(2, "Introduza o seu nome completo")
     .max(120, "Nome muito longo"),
   email: z.string().trim().email("E-mail inválido"),
   phone: z
     .string()
     .trim()
-    .min(8, "Digite um telefone/WhatsApp válido")
+    .min(8, "Introduza um telefone/WhatsApp válido")
     .max(30, "Telefone muito longo"),
   profile: z.enum(partnerProfileValues, {
     message: "Selecione o seu perfil",
@@ -32,7 +32,7 @@ export const partnerSchema = z.object({
   audience: z
     .string()
     .trim()
-    .min(10, "Conta um pouco mais (mín. 10 caracteres)")
+    .min(10, "Conte-me um pouco mais (mín. 10 caracteres)")
     .max(2000, "Mensagem muito longa"),
   link: z
     .string()

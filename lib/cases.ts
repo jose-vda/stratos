@@ -62,12 +62,12 @@ export const caseStudies: CaseStudy[] = [
       en: "A hub that centralized the entire operation",
     },
     summary: {
-      pt: "Unificamos clientes, projetos e finanças num único painel — fim das planilhas soltas.",
+      pt: "Unificamos clientes, projetos e finanças num único painel — fim das folhas de cálculo soltas.",
       en: "We unified clients, projects and finances in a single dashboard — no more scattered spreadsheets.",
     },
     period: { pt: "Business Hub · 8 semanas", en: "Business Hub · 8 weeks" },
     problem: {
-      pt: "A operação estava espalhada por planilhas, e-mails e mensagens. Cada relatório levava horas para ser montado e nada conversava entre si.",
+      pt: "A operação estava espalhada por folhas de cálculo, e-mails e mensagens. Cada relatório levava horas para ser montado e nada conversava entre si.",
       en: "Operations were scattered across spreadsheets, emails and messages. Each report took hours to assemble and nothing talked to each other.",
     },
     approach: {
@@ -75,7 +75,7 @@ export const caseStudies: CaseStudy[] = [
         "Diagnóstico dos processos atuais e dos pontos que mais custavam tempo.",
         "Arquitetura de um hub com módulos de clientes, projetos e finanças.",
         "Desenvolvimento iterativo com previews semanais e validação no uso real.",
-        "Treinamento da equipe e acompanhamento nos primeiros dias críticos.",
+        "Formação da equipa e acompanhamento nos primeiros dias críticos.",
       ],
       en: [
         "Diagnosis of current processes and the points that cost the most time.",
@@ -85,24 +85,24 @@ export const caseStudies: CaseStudy[] = [
       ],
     },
     outcome: {
-      pt: "A equipe passou a enxergar a operação inteira em tempo real, com relatórios gerados em segundos em vez de horas.",
+      pt: "A equipa passou a ver a operação inteira em tempo real, com relatórios gerados em segundos em vez de horas.",
       en: "The team gained a real-time view of the whole operation, with reports generated in seconds instead of hours.",
     },
     metrics: [
-      { label: { pt: "Horas/semana economizadas", en: "Hours/week saved" }, value: "12+" },
-      { label: { pt: "Planilhas eliminadas", en: "Spreadsheets removed" }, value: "9" },
+      { label: { pt: "Horas/semana poupadas", en: "Hours/week saved" }, value: "12+" },
+      { label: { pt: "Folhas de cálculo eliminadas", en: "Spreadsheets removed" }, value: "9" },
       { label: { pt: "Tempo de relatório", en: "Report time" }, value: "−95%" },
     ],
     stack: ["Next.js", "PostgreSQL", "Auth", "Dashboards"],
     testimonial: {
       quote: {
-        pt: "A Stratos transformou completamente como gerenciamos nossos processos internos. O hub que desenvolveram economiza horas por semana da nossa equipe.",
-        en: "Stratos completely transformed how we manage our internal processes. The hub they built saves our team hours every week.",
+        pt: "A Flywheel transformou completamente a forma como gerimos os nossos processos internos. O hub que desenvolveram poupa horas por semana à nossa equipa.",
+        en: "Flywheel completely transformed how we manage our internal processes. The hub they built saves our team hours every week.",
       },
       name: "Ana Paula Mendes",
       role: {
-        pt: "Diretora Operacional, Mendes & Co.",
-        en: "Operations Director, Mendes & Co.",
+        pt: "Diretora Operacional",
+        en: "Operations Director",
       },
     },
   },
@@ -114,7 +114,7 @@ export const caseStudies: CaseStudy[] = [
     sector: { pt: "Consultoria", en: "Consulting" },
     category: { pt: "Aplicação web", en: "Web app" },
     title: {
-      pt: "Uma plataforma sob medida do diagnóstico à entrega",
+      pt: "Uma plataforma à medida do diagnóstico à entrega",
       en: "A tailor-made platform from diagnosis to delivery",
     },
     summary: {
@@ -129,7 +129,7 @@ export const caseStudies: CaseStudy[] = [
     approach: {
       pt: [
         "Mapeamento do fluxo de trabalho e dos dados que importavam de verdade.",
-        "Proposta clara de escopo, stack e cronograma antes de escrever código.",
+        "Proposta clara de âmbito, stack e cronograma antes de escrever código.",
         "Construção com qualidade de produção e canal direto para feedback.",
         "Deploy com checklist de go-live e documentação de uso.",
       ],
@@ -141,7 +141,7 @@ export const caseStudies: CaseStudy[] = [
       ],
     },
     outcome: {
-      pt: "Transparência total do início ao fim, com previews semanais e um resultado que superou as expectativas do time.",
+      pt: "Transparência total do início ao fim, com previews semanais e um resultado que superou as expectativas da equipa.",
       en: "Full transparency from start to finish, with weekly previews and a result that exceeded the team's expectations.",
     },
     metrics: [
@@ -156,7 +156,7 @@ export const caseStudies: CaseStudy[] = [
         en: "From diagnosis to delivery, total transparency. We got weekly previews and the final result beat our expectations. I recommend it without hesitation.",
       },
       name: "Ricardo Ferreira",
-      role: { pt: "CEO, RF Consultoria", en: "CEO, RF Consultoria" },
+      role: { pt: "CEO", en: "CEO" },
     },
   },
   {
@@ -181,7 +181,7 @@ export const caseStudies: CaseStudy[] = [
     },
     approach: {
       pt: [
-        "Design sob medida alinhado à identidade do estúdio.",
+        "Design à medida alinhado à identidade do estúdio.",
         "Foco em performance, SEO e clareza de conversão.",
         "Entrega dentro do prazo e do orçamento combinados.",
         "Suporte pós-entrega com resposta rápida.",
@@ -205,18 +205,18 @@ export const caseStudies: CaseStudy[] = [
     stack: ["Next.js", "Tailwind", "SEO", "CMS"],
     testimonial: {
       quote: {
-        pt: "Nossa plataforma foi entregue no prazo e dentro do orçamento. Mas o melhor foi o suporte pós-entrega — toda vez que precisei, tive resposta rápida.",
+        pt: "A nossa plataforma foi entregue no prazo e dentro do orçamento. Mas o melhor foi o suporte pós-entrega — sempre que precisei, tive resposta rápida.",
         en: "Our platform was delivered on time and on budget. But the best part was the post-launch support — every time I needed it, I got a fast reply.",
       },
       name: "Carla Oliveira",
-      role: { pt: "Fundadora, Studio Oliva", en: "Founder, Studio Oliva" },
+      role: { pt: "Fundadora", en: "Founder" },
     },
   },
 ];
 
 function localizeCase(c: CaseStudy, lang: Lang): LocalCase {
   const pick = (v: string | L): string =>
-    typeof v === "string" ? v : v[lang];
+    typeof v === "string" ? v : (v[lang] ?? "");
   return {
     slug: c.slug,
     published: c.published,

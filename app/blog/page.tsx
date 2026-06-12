@@ -8,7 +8,7 @@ import { getAllPosts } from "@/lib/blog";
 export const metadata: Metadata = {
   title: "Blog",
   description:
-    "Ideias, bastidores e aprendizados sobre tecnologia, produto e crescimento — pela Stratos.dev.",
+    "Ideias, bastidores e aprendizagens sobre tecnologia, produto e crescimento — pela Flywheel.dev.",
 };
 
 export default function BlogPage() {
@@ -29,7 +29,7 @@ export default function BlogPage() {
           <SectionHeader
             kicker="Blog"
             title="Ideias que movem negócios"
-            subtitle="Bastidores, aprendizados e perspectivas sobre tecnologia, produto e crescimento."
+            subtitle="Bastidores, aprendizagens e perspetivas sobre tecnologia, produto e crescimento."
           />
         </div>
       </section>

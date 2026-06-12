@@ -12,19 +12,19 @@
 //      revisado juridicamente.
 // ─────────────────────────────────────────────────────────────────────────
 export const siteConfig = {
-  name: "Stratos.dev",
-  tagline: "Tecnologia sob medida para o seu negócio crescer",
+  name: "Flywheel.dev",
+  tagline: "Tecnologia à medida para o seu negócio crescer",
   description:
     "Arquitetamos, desenvolvemos e implementamos sites, aplicações e hubs de gestão para pequenas e médias empresas. Da ideia ao impacto.",
-  url: process.env.NEXT_PUBLIC_SITE_URL ?? "https://stratos.dev",
-  author: "Stratos",
-  whatsappNumber: process.env.NEXT_PUBLIC_WHATSAPP_NUMBER ?? "5511999999999",
+  url: process.env.NEXT_PUBLIC_SITE_URL ?? "https://flywheel.dev",
+  author: "Flywheel",
+  whatsappNumber: process.env.NEXT_PUBLIC_WHATSAPP_NUMBER ?? "351912345678",
   whatsappMessage:
-    "Olá! Vim pelo site da Stratos.dev e gostaria de conversar sobre um projeto.",
+    "Olá! Vim pelo site da Flywheel.dev e gostaria de conversar sobre um projeto.",
   calendlyUrl:
     process.env.NEXT_PUBLIC_CALENDLY_URL ??
-    "https://calendly.com/stratos-dev/diagnostico",
-  // Recompensa por concluir o diagnóstico: código de voucher exibido na tela
+    "https://calendly.com/flywheel-dev/diagnostico",
+  // Recompensa por concluir o diagnóstico: código de voucher exibido no ecrã
   // e enviado no e-mail. Texto livre — configure a condição real via env.
   quizVoucher: {
     code: process.env.NEXT_PUBLIC_QUIZ_VOUCHER_CODE ?? "DIAGNOSTICO10",
@@ -35,7 +35,7 @@ export const siteConfig = {
       process.env.NEXT_PUBLIC_QUIZ_VOUCHER_EN ??
       "10% off your first project",
   },
-  email: process.env.NEXT_PUBLIC_CONTACT_EMAIL ?? "contato@stratos.dev",
+  email: process.env.NEXT_PUBLIC_CONTACT_EMAIL ?? "contacto@flywheel.dev",
   socials: {
     linkedin: process.env.NEXT_PUBLIC_SOCIAL_LINKEDIN ?? "https://www.linkedin.com/",
     github: process.env.NEXT_PUBLIC_SOCIAL_GITHUB ?? "https://github.com/",
@@ -45,7 +45,7 @@ export const siteConfig = {
     { label: "Serviços", id: "servicos" },
     { label: "Diagnóstico", id: "diagnostico" },
     { label: "Processo", id: "processo" },
-    { label: "Contato", id: "contato" },
+    { label: "Contacto", id: "contato" },
   ],
   // Páginas roteadas separadas da home.
   pageNav: [

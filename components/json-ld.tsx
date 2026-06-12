@@ -24,7 +24,7 @@ export function OrganizationJsonLd() {
         description: siteConfig.description,
         url: siteConfig.url,
         email: siteConfig.email,
-        areaServed: "BR",
+        areaServed: "PT",
         slogan: siteConfig.tagline,
         sameAs: [siteConfig.socials.linkedin, siteConfig.socials.github],
         knowsAbout: [
@@ -40,12 +40,15 @@ export function OrganizationJsonLd() {
 }
 
 export function FaqJsonLd() {
+  const faqsPt = getFaqs("pt");
+  const faqsEn = getFaqs("en");
+  const allFaqs = [...faqsPt, ...faqsEn];
   return (
     <JsonLd
       data={{
         "@context": "https://schema.org",
         "@type": "FAQPage",
-        mainEntity: getFaqs("pt").map((f) => ({
+        mainEntity: allFaqs.map((f) => ({
           "@type": "Question",
           name: f.question,
           acceptedAnswer: { "@type": "Answer", text: f.answer },

@@ -4,7 +4,7 @@ import { siteConfig } from "@/lib/site";
 export const metadata: Metadata = {
   title: "Termos de Uso",
   description:
-    "Termos e condições de uso do site e dos serviços da Stratos.dev.",
+    "Termos e condições de uso do site e dos serviços da Flywheel.dev.",
   alternates: { canonical: "/termos" },
 };
 
@@ -24,15 +24,15 @@ export default function TermosPage() {
       {/* TODO: este é um texto-base. Revise com apoio jurídico antes de publicar. */}
       <div className="prose prose-neutral mt-10 max-w-none prose-headings:font-semibold prose-headings:tracking-tight prose-a:text-foreground">
         <p>
-          Ao acessar e utilizar este site, você concorda com os termos descritos
+          Ao aceder e utilizar este site, concorda com os termos descritos
           abaixo. Se não concordar, por favor não utilize o site.
         </p>
 
         <h2>1. Uso do site</h2>
         <p>
           O conteúdo deste site é disponibilizado para fins informativos sobre os
-          serviços da <strong>{siteConfig.name}</strong>. Você concorda em
-          utilizá-lo de forma lícita e a não tentar prejudicar o seu
+          serviços da <strong>{siteConfig.name}</strong>. Concorda em
+          utilizá-lo de forma lícita e em não tentar prejudicar o seu
           funcionamento.
         </p>
 
@@ -43,11 +43,11 @@ export default function TermosPage() {
           sem autorização prévia.
         </p>
 
-        <h2>3. Contato e propostas</h2>
+        <h2>3. Contacto e propostas</h2>
         <p>
-          O envio do formulário de contato não constitui contrato. Qualquer
+          O envio do formulário de contacto não constitui contrato. Qualquer
           prestação de serviço será formalizada em proposta e contrato
-          específicos, com escopo, prazos e investimento acordados entre as
+          específicos, com âmbito, prazos e investimento acordados entre as
           partes.
         </p>
 
@@ -64,7 +64,7 @@ export default function TermosPage() {
           é sempre a publicada nesta página.
         </p>
 
-        <h2>6. Contato</h2>
+        <h2>6. Contacto</h2>
         <p>
           Dúvidas sobre estes Termos? Escreva para{" "}
           <a href={`mailto:${siteConfig.email}`}>{siteConfig.email}</a>.

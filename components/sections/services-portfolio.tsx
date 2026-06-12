@@ -60,7 +60,7 @@ const tabsByLang: Record<Lang, ServiceTab[]> = {
       title: "Sites & landing pages",
       description:
         "Presença digital premium que comunica autoridade e converte visitantes em clientes.",
-      bullets: ["Design sob medida", "Performance & SEO", "CMS opcional"],
+      bullets: ["Design à medida", "Performance & SEO", "CMS opcional"],
       projects: [
         { category: "Site institucional", title: "LifeLink", description: "Site institucional premium para plataforma de emergência médica — autoridade, clareza e conversão.", url: "https://lifelink.pt", image: "/work/lifelink.png" },
         { category: "Cultura & experiências", title: "Saudade e Fado", description: "Experiências imersivas de Fado em Lisboa — um site que vende memórias, não bilhetes. Tradição e luxo contemporâneo.", url: "https://saudadeefado.com", image: "/work/saudade-e-fado.png" },
@@ -70,13 +70,13 @@ const tabsByLang: Record<Lang, ServiceTab[]> = {
       id: "apps",
       icon: Layers,
       label: "Apps",
-      title: "Aplicações web sob medida",
+      title: "Aplicações web à medida",
       description:
         "Sistemas internos, dashboards e plataformas construídos para resolver o seu problema real.",
       bullets: ["Stack moderna", "Auth & permissões", "Integrações"],
       projects: [
         { category: "Plataforma de saúde", title: "LifeLink", description: "Plataforma de emergência médica — cada segundo conta. Site, aplicação e hub operacional num só ecossistema.", url: "https://lifelink.pt", image: "/work/lifelink.png" },
-        { category: "Multi-produto", title: "Ecossistema digital", description: "Site + aplicação + automações trabalhando juntos, com identidade consistente." },
+        { category: "Multi-produto", title: "Ecossistema digital", description: "Site + aplicação + automações a trabalhar em conjunto, com identidade consistente." },
       ],
     },
     {
@@ -85,10 +85,10 @@ const tabsByLang: Record<Lang, ServiceTab[]> = {
       label: "Business Hub",
       title: "Business Hubs",
       description:
-        "Centralize gestão, dados e operações em um único painel feito para o seu negócio.",
-      bullets: ["Centralização", "Relatórios", "Multi-usuário"],
+        "Centralize gestão, dados e operações num único painel feito para o seu negócio.",
+      bullets: ["Centralização", "Relatórios", "Multiutilizador"],
       projects: [
-        { category: "Business hub", title: "Centro operacional", description: "Hub que unifica clientes, projetos, finanças e relatórios em um lugar só." },
+        { category: "Business hub", title: "Centro operacional", description: "Hub que unifica clientes, projetos, finanças e relatórios num só lugar." },
       ],
     },
     {
@@ -97,7 +97,7 @@ const tabsByLang: Record<Lang, ServiceTab[]> = {
       label: "Automações",
       title: "Automações & integrações",
       description:
-        "Conecte ferramentas, elimine trabalho manual e libere tempo para o que importa.",
+        "Conecte ferramentas, elimine trabalho manual e liberte tempo para o que importa.",
       bullets: ["APIs & webhooks", "Fluxos automáticos", "Notificações"],
       projects: [
         { category: "Automação", title: "Fluxo que se opera sozinho", description: "Integrações entre sistemas que eliminam horas de trabalho manual por semana." },
@@ -201,8 +201,9 @@ export function ServicesPortfolio() {
   const lang = useLang();
   const tabs = tabsByLang[lang];
   const [activeIdx, setActiveIdx] = React.useState(0);
-  const prevIdx = React.useRef(activeIdx);
-  const dir = activeIdx > prevIdx.current ? 1 : -1;
+  // Direção da troca de aba (1 = avança, -1 = volta) para animar o slide.
+  // Guardada em estado — ler um ref durante o render não é permitido.
+  const [dir, setDir] = React.useState(1);
   const reduced = useReducedMotion();
   const sectionRef = React.useRef<HTMLElement>(null);
   const { scrollYProgress } = useScroll({
@@ -212,7 +213,7 @@ export function ServicesPortfolio() {
   const headingY = useTransform(scrollYProgress, [0, 1], [20, -20]);
 
   const handleChange = (idx: number) => {
-    prevIdx.current = activeIdx;
+    setDir(idx > activeIdx ? 1 : -1);
     setActiveIdx(idx);
   };
 
@@ -488,6 +489,7 @@ function WorkCard({
           />
         ) : showVideo ? (
           <video
+            aria-hidden
             autoPlay
             muted
             loop

@@ -51,13 +51,13 @@ export const metadata: Metadata = {
     "business hub",
     "Next.js",
     "automação",
-    "Stratos",
+    "Flywheel",
   ],
   authors: [{ name: siteConfig.author }],
   creator: siteConfig.author,
   openGraph: {
     type: "website",
-    locale: "pt_BR",
+    locale: "pt_PT",
     url: siteConfig.url,
     title: siteConfig.name,
     description: siteConfig.description,
@@ -83,7 +83,7 @@ export default function RootLayout({
 }>) {
   return (
     <html
-      lang="pt-BR"
+      lang="pt-PT"
       className={`${geistSans.variable} ${geistMono.variable} ${instrumentSerif.variable}`}
       suppressHydrationWarning
     >
@@ -99,7 +99,13 @@ export default function RootLayout({
             <FloatingCta />
           </MotionProvider>
         </LanguageProvider>
-        <Toaster position="top-center" richColors closeButton />
+        <Toaster
+          position="top-center"
+          richColors
+          closeButton
+          offset={{ top: "5.5rem" }}
+          mobileOffset={{ top: "5.5rem" }}
+        />
         <Analytics />
         <SpeedInsights />
       </body>

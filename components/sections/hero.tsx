@@ -67,6 +67,9 @@ function CursorSpotlight({
   const sx = useSpring(x, { stiffness: 90, damping: 20, mass: 0.6 });
   const sy = useSpring(y, { stiffness: 90, damping: 20, mass: 0.6 });
 
+  // Gate de hidratação: o spotlight depende do cursor, que só existe no
+  // cliente. 1 render extra pós-mount é o custo esperado, não um loop.
+  // eslint-disable-next-line react-hooks/set-state-in-effect
   React.useEffect(() => setMounted(true), []);
 
   React.useEffect(() => {

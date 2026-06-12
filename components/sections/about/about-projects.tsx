@@ -53,7 +53,7 @@ const milestones: Milestone[] = [
         language: "C",
         tag: "Fundamentos",
         description:
-          "Minha primeira biblioteca: recriei do zero funções essenciais da libc e estruturas de dados base.",
+          "A minha primeira biblioteca: recriei do zero funções essenciais da libc e estruturas de dados base.",
         repo: "https://github.com/jose-vda/Libft",
       },
     ],
@@ -221,7 +221,7 @@ export function AboutProjects() {
               O que construí na 42Lisboa
             </h2>
             <p className="mt-4 max-w-2xl text-pretty text-base text-muted-foreground md:text-lg">
-              Cada projeto do cursus foi um problema novo para destrinchar — do
+              Cada projeto do cursus foi um problema novo para destrinçar — do
               C puro à orientação a objetos.
             </p>
 

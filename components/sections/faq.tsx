@@ -23,7 +23,8 @@ export function Faq() {
   const toggle = (i: number) =>
     setOpen((prev) => {
       const next = new Set(prev);
-      next.has(i) ? next.delete(i) : next.add(i);
+      if (next.has(i)) next.delete(i);
+      else next.add(i);
       return next;
     });
 
@@ -103,10 +104,14 @@ export function Faq() {
                     id={`faq-panel-${i}`}
                     role="region"
                     aria-labelledby={`faq-trigger-${i}`}
-                    initial={{ height: 0, opacity: 0 }}
-                    animate={{ height: "auto", opacity: 1 }}
-                    exit={{ height: 0, opacity: 0 }}
-                    transition={{ duration: 0.3, ease: [0.22, 1, 0.36, 1] }}
+                    initial={reduced ? false : { height: 0, opacity: 0 }}
+                    animate={reduced ? undefined : { height: "auto", opacity: 1 }}
+                    exit={reduced ? undefined : { height: 0, opacity: 0 }}
+                    transition={
+                      reduced
+                        ? { duration: 0 }
+                        : { duration: 0.3, ease: [0.22, 1, 0.36, 1] }
+                    }
                     style={{ overflow: "hidden" }}
                   >
                     <p className="px-6 pb-5 text-[15px] leading-relaxed text-muted-foreground">

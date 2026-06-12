@@ -39,7 +39,7 @@ export default function OgImage() {
               color: "#0a0a0b",
             }}
           >
-            Stratos<span style={{ color: "#a1a1aa" }}>.dev</span>
+            Flywheel<span style={{ color: "#a1a1aa" }}>.dev</span>
           </div>
         </div>
 
@@ -55,7 +55,7 @@ export default function OgImage() {
               display: "flex",
             }}
           >
-            Tecnologia sob medida para o seu negócio crescer.
+            Tecnologia à medida para o seu negócio crescer.
           </div>
           <div
             style={{

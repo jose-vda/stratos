@@ -1,32 +1,25 @@
 "use client";
 
-import * as React from "react";
 import Link from "next/link";
 import { MessageCircle } from "lucide-react";
 import { m as motion, AnimatePresence } from "motion/react";
 import { whatsappLink } from "@/lib/site";
 import { useT } from "@/components/language-provider";
+import { useFloatingVisibility } from "@/lib/use-floating-visibility";
 
 export function WhatsAppFloating() {
-  const [show, setShow] = React.useState(false);
   const t = useT();
-
-  React.useEffect(() => {
-    const onScroll = () => setShow(window.scrollY > 400);
-    onScroll();
-    window.addEventListener("scroll", onScroll, { passive: true });
-    return () => window.removeEventListener("scroll", onScroll);
-  }, []);
+  const { scrolledPast } = useFloatingVisibility();
 
   return (
     <AnimatePresence>
-      {show && (
+      {scrolledPast && (
         <motion.div
           initial={{ opacity: 0, y: 16, scale: 0.9 }}
           animate={{ opacity: 1, y: 0, scale: 1 }}
           exit={{ opacity: 0, y: 16, scale: 0.9 }}
           transition={{ duration: 0.25 }}
-          className="fixed right-6 bottom-6 z-40"
+          className="fixed right-6 bottom-[calc(1.5rem+env(safe-area-inset-bottom))] z-40"
         >
           <Link
             href={whatsappLink()}

@@ -1,37 +1,69 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Flywheel.dev — site institucional
 
-## Getting Started
+Site institucional da Flywheel.dev: consultoria e desenvolvimento de tecnologia
+à medida (sites, aplicações e hubs de gestão) para pequenas e médias empresas.
 
-First, run the development server:
+Construído com **Next.js 16 (App Router + Turbopack)**, **React 19**,
+**Tailwind CSS v4** e **Motion**. Conteúdo bilíngue (PT/EN), blog em MDX e
+formulários com envio de e-mail via Resend.
+
+## Stack
+
+- **Framework:** Next.js 16 (App Router, React Server Components, React Compiler)
+- **UI:** Tailwind CSS v4, shadcn/Base UI, Lucide, Motion
+- **Conteúdo:** blog em MDX (`content/blog/*.mdx`), case studies em `lib/cases.ts`
+- **Formulários:** React Hook Form + Zod, e-mail via Resend
+- **i18n:** dicionário próprio em `lib/i18n.ts` (PT/EN), sem dependência externa
+- **SEO:** sitemap, robots, OpenGraph dinâmico e JSON-LD (Organization + FAQ)
+- **Deploy:** Vercel (Analytics + Speed Insights)
+
+## Desenvolvimento
 
 ```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+npm install
+cp .env.example .env.local   # preencha as variáveis
+npm run dev                  # http://localhost:3000
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Scripts:
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+- `npm run dev` — servidor de desenvolvimento
+- `npm run build` — build de produção
+- `npm run start` — serve o build
+- `npm run lint` — ESLint
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+## Variáveis de ambiente
 
-## Learn More
+Todas estão documentadas em [`.env.example`](./.env.example) (fonte única).
+Em produção, defina as mesmas no painel da Vercel
+(*Project → Settings → Environment Variables*). Resumo:
 
-To learn more about Next.js, take a look at the following resources:
+- **Resend:** `RESEND_API_KEY`, `RESEND_FROM`, `CONTACT_EMAIL`
+- **SEO/domínio:** `NEXT_PUBLIC_SITE_URL`
+- **Contacto:** `NEXT_PUBLIC_WHATSAPP_NUMBER`, `NEXT_PUBLIC_CALENDLY_URL`, `NEXT_PUBLIC_CONTACT_EMAIL`
+- **Redes:** `NEXT_PUBLIC_SOCIAL_LINKEDIN`, `NEXT_PUBLIC_SOCIAL_GITHUB`
+- **Voucher do quiz:** `NEXT_PUBLIC_QUIZ_VOUCHER_*`
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+Sem `RESEND_API_KEY`, em dev os formulários apenas logam o payload e simulam
+sucesso; em produção retornam 503.
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+## Estrutura
 
-## Deploy on Vercel
+```
+app/                 rotas (home, /sobre, /parceiros, /blog, /privacidade, /termos, /api/*)
+components/          UI e seções (components/sections/*)
+content/blog/        artigos em MDX
+lib/                 dados e helpers (site, i18n, cases, faqs, partners, blog…)
+public/              vídeos/posters do hero e assets estáticos
+```
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+## Checklist de go-live
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
-# stratos
+Antes de publicar, ver o checklist no topo de [`lib/site.ts`](./lib/site.ts):
+
+1. Variáveis de ambiente reais (dev + Vercel) — domínio, WhatsApp, Calendly, redes.
+2. Verificar o domínio remetente no Resend (DNS) para o `RESEND_FROM` real.
+3. Substituir os case studies placeholder em `lib/cases.ts` por projetos reais
+   (eles também alimentam a secção de Depoimentos).
+4. Revisar juridicamente o texto de `/privacidade` e `/termos` e atualizar a data.
+5. Revisar percentagens/regras de comissão em `lib/partners.ts`.

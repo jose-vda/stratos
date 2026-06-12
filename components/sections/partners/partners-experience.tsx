@@ -17,6 +17,8 @@ export function PartnersExperience() {
   // Permite abrir já no caminho de desenvolvedor via /parceiros?track=dev.
   React.useEffect(() => {
     const param = new URLSearchParams(window.location.search).get("track");
+    // Deep-link client-only (lê a query string só após mount); 1 render extra.
+    // eslint-disable-next-line react-hooks/set-state-in-effect
     if (param === "dev" || param === "develop") setTrack("develop");
   }, []);
 
