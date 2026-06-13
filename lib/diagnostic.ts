@@ -7,10 +7,10 @@ import type { Lang } from "@/lib/i18n";
 // ─────────────────────────────────────────────────────────────────────────
 
 /** Chave usada para passar o pré-preenchimento do quiz ao formulário. */
-export const LEAD_PREFILL_KEY = "flywheel:lead-prefill";
+export const LEAD_PREFILL_KEY = "flyup:lead-prefill";
 
 /** Evento disparado quando o quiz grava um pré-preenchimento. */
-export const LEAD_PREFILL_EVENT = "flywheel:lead-prefill-ready";
+export const LEAD_PREFILL_EVENT = "flyup:lead-prefill-ready";
 
 export type SolutionId = "site" | "app" | "hub" | "automation";
 

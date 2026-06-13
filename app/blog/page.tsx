@@ -8,7 +8,7 @@ import { getAllPosts } from "@/lib/blog";
 export const metadata: Metadata = {
   title: "Blog",
   description:
-    "Ideias, bastidores e aprendizagens sobre tecnologia, produto e crescimento — pela Flywheel.dev.",
+    "Ideias, bastidores e aprendizagens sobre tecnologia, produto e crescimento — pela Flyup.dev.",
 };
 
 export default function BlogPage() {

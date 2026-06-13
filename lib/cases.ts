@@ -96,8 +96,8 @@ export const caseStudies: CaseStudy[] = [
     stack: ["Next.js", "PostgreSQL", "Auth", "Dashboards"],
     testimonial: {
       quote: {
-        pt: "A Flywheel transformou completamente a forma como gerimos os nossos processos internos. O hub que desenvolveram poupa horas por semana à nossa equipa.",
-        en: "Flywheel completely transformed how we manage our internal processes. The hub they built saves our team hours every week.",
+        pt: "A Flyup transformou completamente a forma como gerimos os nossos processos internos. O hub que desenvolveram poupa horas por semana à nossa equipa.",
+        en: "Flyup completely transformed how we manage our internal processes. The hub they built saves our team hours every week.",
       },
       name: "Ana Paula Mendes",
       role: {

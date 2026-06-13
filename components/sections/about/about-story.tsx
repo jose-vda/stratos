@@ -13,7 +13,7 @@ import { Lightbulb, Rocket, Waves } from "lucide-react";
 import { cn } from "@/lib/utils";
 import { useT } from "@/components/language-provider";
 
-// Ícones por capítulo (a piscina → a virada → a Flywheel.dev nasce).
+// Ícones por capítulo (a piscina → a virada → a Flyup.dev nasce).
 const CHAPTER_ICONS = [Waves, Lightbulb, Rocket];
 
 export function AboutStory() {

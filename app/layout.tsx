@@ -51,7 +51,7 @@ export const metadata: Metadata = {
     "business hub",
     "Next.js",
     "automação",
-    "Flywheel",
+    "Flyup",
   ],
   authors: [{ name: siteConfig.author }],
   creator: siteConfig.author,

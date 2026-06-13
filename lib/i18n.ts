@@ -115,7 +115,7 @@ const pt = {
     talkWhatsapp: "Falar no WhatsApp",
     schedule: "Marcar call grátis",
     whatsappMessage:
-      "Olá! Fiz o diagnóstico no site da Flywheel.dev e gostaria de conversar sobre os próximos passos.",
+      "Olá! Fiz o diagnóstico no site da Flyup.dev e gostaria de conversar sobre os próximos passos.",
     fullFormLink: "Prefiro preencher o formulário completo",
   },
   process: {
@@ -138,7 +138,7 @@ const pt = {
     titlePre: "Resultados que",
     titleAccent: "falam por si",
     subtitle:
-      "Cada projeto é uma parceria. Veja o que os nossos clientes dizem sobre trabalhar com a Flywheel.",
+      "Cada projeto é uma parceria. Veja o que os nossos clientes dizem sobre trabalhar com a Flyup.",
     ariaLabel: "Depoimentos de clientes",
   },
   faq: {
@@ -203,7 +203,7 @@ const pt = {
     heroTitleAccent: "cresça",
     heroTitlePost: "connosco",
     heroSubtitle:
-      "Apresente a Flywheel.dev a quem precisa de tecnologia à medida e ganhe uma percentagem por cada cliente que fechar. Quanto mais indicar, maior a sua comissão.",
+      "Apresente a Flyup.dev a quem precisa de tecnologia à medida e ganhe uma percentagem por cada cliente que fechar. Quanto mais indicar, maior a sua comissão.",
     becomePartner: "Quero ser parceiro",
     seeTiers: "Ver níveis de comissão",
     tabRefer: "Indicar projetos",
@@ -253,7 +253,7 @@ const pt = {
       linkPh: "instagram.com/voce, seu site, LinkedIn…",
       audience: "Como pretende indicar?",
       audiencePh:
-        "Fale-me sobre a sua rede, público ou clientes — e como pretende apresentar a Flywheel.dev.",
+        "Fale-me sobre a sua rede, público ou clientes — e como pretende apresentar a Flyup.dev.",
       optional: "opcional",
       submitIdle: "Quero ser parceiro",
       submitting: "A enviar…",
@@ -280,7 +280,7 @@ const pt = {
     heroTitleAccent: "evolua",
     heroTitlePost: "connosco",
     heroSubtitle:
-      "Entre no pool de programadores da Flywheel.dev e seja chamado para projetos reais à medida. É remunerado por entrega — sem precisar de angariar clientes e sem exclusividade.",
+      "Entre no pool de programadores da Flyup.dev e seja chamado para projetos reais à medida. É remunerado por entrega — sem precisar de angariar clientes e sem exclusividade.",
     becomePartner: "Quero entrar no pool",
     seeStack: "Ver o que procuro",
     howKicker: "01 — Como funciona",
@@ -358,15 +358,15 @@ const pt = {
     badge: "A minha história com código",
     h1Pre: "Comecei a programar na 42Lisboa",
     h1Accent: "e nunca mais parei",
-    subtitle: "Da 42 à Flywheel.dev: a história de quem aprende a construir.",
+    subtitle: "Da 42 à Flyup.dev: a história de quem aprende a construir.",
     storyKicker: "01 — A minha história",
     storyTitle: "Da 42Lisboa ao código com propósito",
     paragraphs: [
       "A minha relação com a programação começou na 42Lisboa. Entrei sem saber o que esperar e mergulhei na piscina — semanas intensas de código do zero, sem professores, a aprender com os colegas e a resolver problema atrás de problema.",
       "O método peer-to-peer e a obsessão por projetos práticos mudaram a forma como penso. Em vez de decorar respostas, aprendi a destrinçar problemas — e percebi que o mais valioso não é a tecnologia em si, mas o que ela resolve para as pessoas e os negócios por trás dela.",
-      "A Flywheel.dev nasceu desse ponto de viragem: pegar em tudo o que aprendo e transformar em sites, aplicações e sistemas à medida para quem empreende. Cada projeto começa pelo problema real — a tecnologia certa vem depois.",
+      "A Flyup.dev nasceu desse ponto de viragem: pegar em tudo o que aprendo e transformar em sites, aplicações e sistemas à medida para quem empreende. Cada projeto começa pelo problema real — a tecnologia certa vem depois.",
     ],
-    storyChapters: ["A piscina", "O ponto de viragem", "A Flywheel.dev nasce"],
+    storyChapters: ["A piscina", "O ponto de viragem", "A Flyup.dev nasce"],
     ctaPre: "Vamos construir algo",
     ctaAccent: "juntos?",
     ctaSubtitle:
@@ -505,7 +505,7 @@ const en: typeof pt = {
     talkWhatsapp: "Chat on WhatsApp",
     schedule: "Book a free call",
     whatsappMessage:
-      "Hi! I took the diagnosis on the Flywheel.dev site and I'd like to talk about the next steps.",
+      "Hi! I took the diagnosis on the Flyup.dev site and I'd like to talk about the next steps.",
     fullFormLink: "I'd rather fill out the full form",
   },
   process: {
@@ -528,7 +528,7 @@ const en: typeof pt = {
     titlePre: "Results that",
     titleAccent: "speak for themselves",
     subtitle:
-      "Every project is a partnership. See what our clients say about working with Flywheel.",
+      "Every project is a partnership. See what our clients say about working with Flyup.",
     ariaLabel: "Client testimonials",
   },
   faq: {
@@ -593,7 +593,7 @@ const en: typeof pt = {
     heroTitleAccent: "grow",
     heroTitlePost: "with us",
     heroSubtitle:
-      "Introduce Flywheel.dev to anyone who needs tailor-made technology and earn a percentage for every client that closes. The more you refer, the higher your commission.",
+      "Introduce Flyup.dev to anyone who needs tailor-made technology and earn a percentage for every client that closes. The more you refer, the higher your commission.",
     becomePartner: "Become a partner",
     seeTiers: "See commission tiers",
     tabRefer: "Refer projects",
@@ -643,7 +643,7 @@ const en: typeof pt = {
       linkPh: "instagram.com/you, your site, LinkedIn…",
       audience: "How do you plan to refer?",
       audiencePh:
-        "Tell me about your network, audience or clients — and how you plan to introduce Flywheel.dev.",
+        "Tell me about your network, audience or clients — and how you plan to introduce Flyup.dev.",
       optional: "optional",
       submitIdle: "Become a partner",
       submitting: "Sending…",
@@ -670,7 +670,7 @@ const en: typeof pt = {
     heroTitleAccent: "grow",
     heroTitlePost: "with us",
     heroSubtitle:
-      "Join the Flywheel.dev developer pool and get called for real tailor-made projects. You're paid per delivery — no need to find clients, no exclusivity.",
+      "Join the Flyup.dev developer pool and get called for real tailor-made projects. You're paid per delivery — no need to find clients, no exclusivity.",
     becomePartner: "Join the pool",
     seeStack: "See what I look for",
     howKicker: "01 — How it works",
@@ -748,15 +748,15 @@ const en: typeof pt = {
     badge: "My story with code",
     h1Pre: "I started coding at 42Lisboa",
     h1Accent: "and never stopped",
-    subtitle: "From 42 to Flywheel.dev: the story of someone who learns by building.",
+    subtitle: "From 42 to Flyup.dev: the story of someone who learns by building.",
     storyKicker: "01 — My story",
     storyTitle: "From 42Lisboa to code with purpose",
     paragraphs: [
       "My relationship with programming started at 42Lisboa. I walked in not knowing what to expect and dove into the pool — intense weeks of code from scratch, no teachers, learning from peers and solving problem after problem.",
       "The peer-to-peer method and the obsession with hands-on projects changed the way I think. Instead of memorizing answers, I learned to break problems apart — and realized the most valuable thing isn't the technology itself, but what it solves for the people and businesses behind it.",
-      "Flywheel.dev was born from that turning point: taking everything I learn and turning it into websites, apps and systems tailor-made for entrepreneurs. Every project starts with the real problem — the right technology comes after.",
+      "Flyup.dev was born from that turning point: taking everything I learn and turning it into websites, apps and systems tailor-made for entrepreneurs. Every project starts with the real problem — the right technology comes after.",
     ],
-    storyChapters: ["The piscine", "The mindset shift", "Flywheel.dev is born"],
+    storyChapters: ["The piscine", "The mindset shift", "Flyup.dev is born"],
     ctaPre: "Let's build something",
     ctaAccent: "together?",
     ctaSubtitle:

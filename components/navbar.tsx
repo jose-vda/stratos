@@ -71,7 +71,7 @@ export function Navbar() {
             aria-hidden
             className="bg-brand-gradient inline-block h-2.5 w-2.5 rounded-full"
           />
-          <span>Flywheel</span>
+          <span>Flyup</span>
           <span className="text-muted-foreground">.dev</span>
         </Link>
 

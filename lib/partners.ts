@@ -97,8 +97,8 @@ const steps: { icon: LucideIcon; title: L; description: L }[] = [
     icon: Megaphone,
     title: { pt: "Indique", en: "Refer" },
     description: {
-      pt: "Apresente a Flywheel.dev para quem precisa de tecnologia à medida. Eu cuido do diagnóstico e da proposta.",
-      en: "Introduce Flywheel.dev to anyone who needs tailor-made technology. I handle the diagnosis and the proposal.",
+      pt: "Apresente a Flyup.dev para quem precisa de tecnologia à medida. Eu cuido do diagnóstico e da proposta.",
+      en: "Introduce Flyup.dev to anyone who needs tailor-made technology. I handle the diagnosis and the proposal.",
     },
   },
   {
@@ -148,8 +148,8 @@ const benefits: { icon: LucideIcon; title: L; description: L }[] = [
     icon: Megaphone,
     title: { pt: "Material de apoio", en: "Sales material" },
     description: {
-      pt: "Apresentações e exemplos prontos para mostrar o valor da Flywheel.dev.",
-      en: "Ready-made decks and examples to show the value of Flywheel.dev.",
+      pt: "Apresentações e exemplos prontos para mostrar o valor da Flyup.dev.",
+      en: "Ready-made decks and examples to show the value of Flyup.dev.",
     },
   },
 ];
@@ -168,8 +168,8 @@ const faqs: { question: L; answer: L }[] = [
       en: "What counts as a valid referral?",
     },
     answer: {
-      pt: "Um contacto que apresenta e que ainda não estava em negociação com a Flywheel.dev. Registamos a indicação no momento da candidatura/apresentação, garantindo transparência na atribuição.",
-      en: "A contact you introduce who wasn't already in talks with Flywheel.dev. We log the referral at the moment of introduction, ensuring transparent attribution.",
+      pt: "Um contacto que apresenta e que ainda não estava em negociação com a Flyup.dev. Registamos a indicação no momento da candidatura/apresentação, garantindo transparência na atribuição.",
+      en: "A contact you introduce who wasn't already in talks with Flyup.dev. We log the referral at the moment of introduction, ensuring transparent attribution.",
     },
   },
   {

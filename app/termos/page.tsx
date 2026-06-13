@@ -4,7 +4,7 @@ import { siteConfig } from "@/lib/site";
 export const metadata: Metadata = {
   title: "Termos de Uso",
   description:
-    "Termos e condições de uso do site e dos serviços da Flywheel.dev.",
+    "Termos e condições de uso do site e dos serviços da Flyup.dev.",
   alternates: { canonical: "/termos" },
 };
 

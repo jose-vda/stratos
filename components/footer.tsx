@@ -57,7 +57,7 @@ export function Footer() {
               aria-hidden
               className="bg-brand-gradient inline-block h-2.5 w-2.5 rounded-full"
             />
-            <span>Flywheel</span>
+            <span>Flyup</span>
             <span className="text-muted-foreground">.dev</span>
           </Link>
           <p className="max-w-sm text-sm text-muted-foreground">
@@ -104,7 +104,7 @@ export function Footer() {
             ))}
           </div>
           <p className="text-xs text-muted-foreground">
-            © {year} Flywheel.dev — {t.footer.rights}
+            © {year} Flyup.dev — {t.footer.rights}
           </p>
         </motion.div>
       </div>

@@ -11,8 +11,8 @@ export function getResend() {
   return cached;
 }
 
-export const RESEND_FROM = process.env.RESEND_FROM ?? "Flywheel.dev <onboarding@resend.dev>";
-export const CONTACT_EMAIL = process.env.CONTACT_EMAIL ?? "contacto@flywheel.dev";
+export const RESEND_FROM = process.env.RESEND_FROM ?? "Flyup.dev <onboarding@resend.dev>";
+export const CONTACT_EMAIL = process.env.CONTACT_EMAIL ?? "contacto@flyup.dev";
 
 type ContactPayload = {
   name: string;
@@ -44,7 +44,7 @@ export function buildContactEmail(payload: ContactPayload) {
   const subject = `Novo lead: ${payload.name}${payload.company ? ` — ${payload.company}` : ""}`;
 
   const text = [
-    `Novo lead pelo site flywheel.dev`,
+    `Novo lead pelo site flyup.dev`,
     ``,
     `Nome: ${payload.name}`,
     `Empresa: ${payload.company || "—"}`,
@@ -62,7 +62,7 @@ export function buildContactEmail(payload: ContactPayload) {
     <table role="presentation" cellspacing="0" cellpadding="0" border="0" align="center" width="600" style="max-width:600px;background:#ffffff;border:1px solid #e4e4e7;border-radius:16px;overflow:hidden;">
       <tr>
         <td style="padding:24px 28px;border-bottom:1px solid #f4f4f5;">
-          <p style="margin:0;font-size:11px;font-family:ui-monospace,Menlo,Monaco,monospace;text-transform:uppercase;letter-spacing:0.12em;color:#71717a;">Flywheel.dev — novo lead</p>
+          <p style="margin:0;font-size:11px;font-family:ui-monospace,Menlo,Monaco,monospace;text-transform:uppercase;letter-spacing:0.12em;color:#71717a;">Flyup.dev — novo lead</p>
           <h1 style="margin:8px 0 0;font-size:22px;line-height:1.3;color:#0a0a0b;">${escapeHtml(payload.name)}${payload.company ? ` <span style="color:#71717a;font-weight:500;">— ${escapeHtml(payload.company)}</span>` : ""}</h1>
         </td>
       </tr>
@@ -88,7 +88,7 @@ export function buildContactEmail(payload: ContactPayload) {
       </tr>
       <tr>
         <td style="padding:16px 28px;border-top:1px solid #f4f4f5;background:#fafafa;color:#a1a1aa;font-size:12px;">
-          Enviado automaticamente pelo formulário de contacto em flywheel.dev
+          Enviado automaticamente pelo formulário de contacto em flyup.dev
         </td>
       </tr>
     </table>
@@ -125,7 +125,7 @@ export function buildPartnerEmail(payload: PartnerPayload) {
   const subject = `Novo parceiro: ${payload.name}`;
 
   const text = [
-    `Nova candidatura ao Programa de Parceiros (flywheel.dev)`,
+    `Nova candidatura ao Programa de Parceiros (flyup.dev)`,
     ``,
     `Nome: ${payload.name}`,
     `E-mail: ${payload.email}`,
@@ -144,7 +144,7 @@ export function buildPartnerEmail(payload: PartnerPayload) {
     <table role="presentation" cellspacing="0" cellpadding="0" border="0" align="center" width="600" style="max-width:600px;background:#ffffff;border:1px solid #e4e4e7;border-radius:16px;overflow:hidden;">
       <tr>
         <td style="padding:24px 28px;border-bottom:1px solid #f4f4f5;">
-          <p style="margin:0;font-size:11px;font-family:ui-monospace,Menlo,Monaco,monospace;text-transform:uppercase;letter-spacing:0.12em;color:#71717a;">Flywheel.dev — novo parceiro</p>
+          <p style="margin:0;font-size:11px;font-family:ui-monospace,Menlo,Monaco,monospace;text-transform:uppercase;letter-spacing:0.12em;color:#71717a;">Flyup.dev — novo parceiro</p>
           <h1 style="margin:8px 0 0;font-size:22px;line-height:1.3;color:#0a0a0b;">${escapeHtml(payload.name)}</h1>
         </td>
       </tr>
@@ -178,7 +178,7 @@ export function buildPartnerEmail(payload: PartnerPayload) {
       </tr>
       <tr>
         <td style="padding:16px 28px;border-top:1px solid #f4f4f5;background:#fafafa;color:#a1a1aa;font-size:12px;">
-          Enviado pelo formulário do Programa de Parceiros em flywheel.dev
+          Enviado pelo formulário do Programa de Parceiros em flyup.dev
         </td>
       </tr>
     </table>
@@ -192,17 +192,17 @@ export function buildPartnerEmail(payload: PartnerPayload) {
 /** Confirmação automática enviada ao candidato a parceiro. */
 export function buildPartnerConfirmationEmail(payload: PartnerPayload) {
   const firstName = payload.name.trim().split(" ")[0] || payload.name;
-  const subject = "Recebi a sua candidatura — Programa de Parceiros Flywheel.dev";
+  const subject = "Recebi a sua candidatura — Programa de Parceiros Flyup.dev";
 
   const text = [
     `Olá, ${firstName}!`,
     ``,
-    `Recebi a sua candidatura ao Programa de Parceiros da Flywheel.dev. Vou avaliar o seu perfil e respondo em até 48h (em dias úteis) com os próximos passos.`,
+    `Recebi a sua candidatura ao Programa de Parceiros da Flyup.dev. Vou avaliar o seu perfil e respondo em até 48h (em dias úteis) com os próximos passos.`,
     ``,
     `Obrigado pelo interesse em crescer junto!`,
     ``,
     `Um abraço,`,
-    `Flywheel.dev`,
+    `Flyup.dev`,
   ].join("\n");
 
   const html = `
@@ -212,19 +212,19 @@ export function buildPartnerConfirmationEmail(payload: PartnerPayload) {
     <table role="presentation" cellspacing="0" cellpadding="0" border="0" align="center" width="600" style="max-width:600px;background:#ffffff;border:1px solid #e4e4e7;border-radius:16px;overflow:hidden;">
       <tr>
         <td style="padding:28px 28px 8px;">
-          <p style="margin:0;font-size:11px;font-family:ui-monospace,Menlo,Monaco,monospace;text-transform:uppercase;letter-spacing:0.12em;color:#71717a;">Flywheel.dev — Parceiros</p>
+          <p style="margin:0;font-size:11px;font-family:ui-monospace,Menlo,Monaco,monospace;text-transform:uppercase;letter-spacing:0.12em;color:#71717a;">Flyup.dev — Parceiros</p>
           <h1 style="margin:10px 0 0;font-size:22px;line-height:1.3;color:#0a0a0b;">Recebi a sua candidatura, ${escapeHtml(firstName)} 🤝</h1>
         </td>
       </tr>
       <tr>
         <td style="padding:8px 28px 24px;font-size:15px;line-height:1.65;color:#3f3f46;">
           <p style="margin:0 0 14px;">Obrigado pelo interesse no Programa de Parceiros! Vou avaliar o seu perfil e respondo em <strong>até 48 horas</strong> (em dias úteis) com os próximos passos.</p>
-          <p style="margin:18px 0 0;">Um abraço,<br/><strong>Flywheel.dev</strong></p>
+          <p style="margin:18px 0 0;">Um abraço,<br/><strong>Flyup.dev</strong></p>
         </td>
       </tr>
       <tr>
         <td style="padding:16px 28px;border-top:1px solid #f4f4f5;background:#fafafa;color:#a1a1aa;font-size:12px;">
-          Esta é uma confirmação automática da sua candidatura em flywheel.dev
+          Esta é uma confirmação automática da sua candidatura em flyup.dev
         </td>
       </tr>
     </table>
@@ -270,7 +270,7 @@ export function buildDeveloperEmail(payload: DeveloperPayload) {
   const subject = `Novo dev: ${payload.name}`;
 
   const text = [
-    `Nova candidatura ao Pool de Desenvolvedores (flywheel.dev)`,
+    `Nova candidatura ao Pool de Desenvolvedores (flyup.dev)`,
     ``,
     `Nome: ${payload.name}`,
     `E-mail: ${payload.email}`,
@@ -291,7 +291,7 @@ export function buildDeveloperEmail(payload: DeveloperPayload) {
     <table role="presentation" cellspacing="0" cellpadding="0" border="0" align="center" width="600" style="max-width:600px;background:#ffffff;border:1px solid #e4e4e7;border-radius:16px;overflow:hidden;">
       <tr>
         <td style="padding:24px 28px;border-bottom:1px solid #f4f4f5;">
-          <p style="margin:0;font-size:11px;font-family:ui-monospace,Menlo,Monaco,monospace;text-transform:uppercase;letter-spacing:0.12em;color:#71717a;">Flywheel.dev — novo dev</p>
+          <p style="margin:0;font-size:11px;font-family:ui-monospace,Menlo,Monaco,monospace;text-transform:uppercase;letter-spacing:0.12em;color:#71717a;">Flyup.dev — novo dev</p>
           <h1 style="margin:8px 0 0;font-size:22px;line-height:1.3;color:#0a0a0b;">${escapeHtml(payload.name)}</h1>
         </td>
       </tr>
@@ -333,7 +333,7 @@ export function buildDeveloperEmail(payload: DeveloperPayload) {
       </tr>
       <tr>
         <td style="padding:16px 28px;border-top:1px solid #f4f4f5;background:#fafafa;color:#a1a1aa;font-size:12px;">
-          Enviado pelo formulário do Pool de Desenvolvedores em flywheel.dev
+          Enviado pelo formulário do Pool de Desenvolvedores em flyup.dev
         </td>
       </tr>
     </table>
@@ -347,17 +347,17 @@ export function buildDeveloperEmail(payload: DeveloperPayload) {
 /** Confirmação automática enviada ao candidato a desenvolvedor. */
 export function buildDeveloperConfirmationEmail(payload: DeveloperPayload) {
   const firstName = payload.name.trim().split(" ")[0] || payload.name;
-  const subject = "Recebi a sua candidatura — Pool de Desenvolvedores Flywheel.dev";
+  const subject = "Recebi a sua candidatura — Pool de Desenvolvedores Flyup.dev";
 
   const text = [
     `Olá, ${firstName}!`,
     ``,
-    `Recebi a sua candidatura ao Pool de Desenvolvedores da Flywheel.dev. Vou avaliar o seu perfil e portfólio e respondo em até 48h (em dias úteis) com os próximos passos.`,
+    `Recebi a sua candidatura ao Pool de Desenvolvedores da Flyup.dev. Vou avaliar o seu perfil e portfólio e respondo em até 48h (em dias úteis) com os próximos passos.`,
     ``,
     `Obrigado pelo interesse em construir junto!`,
     ``,
     `Um abraço,`,
-    `Flywheel.dev`,
+    `Flyup.dev`,
   ].join("\n");
 
   const html = `
@@ -367,19 +367,19 @@ export function buildDeveloperConfirmationEmail(payload: DeveloperPayload) {
     <table role="presentation" cellspacing="0" cellpadding="0" border="0" align="center" width="600" style="max-width:600px;background:#ffffff;border:1px solid #e4e4e7;border-radius:16px;overflow:hidden;">
       <tr>
         <td style="padding:28px 28px 8px;">
-          <p style="margin:0;font-size:11px;font-family:ui-monospace,Menlo,Monaco,monospace;text-transform:uppercase;letter-spacing:0.12em;color:#71717a;">Flywheel.dev — Desenvolvedores</p>
+          <p style="margin:0;font-size:11px;font-family:ui-monospace,Menlo,Monaco,monospace;text-transform:uppercase;letter-spacing:0.12em;color:#71717a;">Flyup.dev — Desenvolvedores</p>
           <h1 style="margin:10px 0 0;font-size:22px;line-height:1.3;color:#0a0a0b;">Recebi a sua candidatura, ${escapeHtml(firstName)} 👨‍💻</h1>
         </td>
       </tr>
       <tr>
         <td style="padding:8px 28px 24px;font-size:15px;line-height:1.65;color:#3f3f46;">
           <p style="margin:0 0 14px;">Obrigado pelo interesse em entrar no pool! Vou avaliar o seu perfil e portfólio e respondo em <strong>até 48 horas</strong> (em dias úteis) com os próximos passos.</p>
-          <p style="margin:18px 0 0;">Um abraço,<br/><strong>Flywheel.dev</strong></p>
+          <p style="margin:18px 0 0;">Um abraço,<br/><strong>Flyup.dev</strong></p>
         </td>
       </tr>
       <tr>
         <td style="padding:16px 28px;border-top:1px solid #f4f4f5;background:#fafafa;color:#a1a1aa;font-size:12px;">
-          Esta é uma confirmação automática da sua candidatura em flywheel.dev
+          Esta é uma confirmação automática da sua candidatura em flyup.dev
         </td>
       </tr>
     </table>
@@ -423,8 +423,8 @@ export function buildDiagnosticEmail(payload: DiagnosticLeadPayload) {
   const s = payload.solution;
   const t = isPt
     ? {
-        subject: `O seu diagnóstico Flywheel.dev: ${s.title}`,
-        kicker: "Flywheel.dev — o seu diagnóstico",
+        subject: `O seu diagnóstico Flyup.dev: ${s.title}`,
+        kicker: "Flyup.dev — o seu diagnóstico",
         heading: "Aqui está o seu diagnóstico 🎯",
         intro:
           "Com base nas suas respostas, a solução mais indicada para o seu momento é:",
@@ -435,12 +435,12 @@ export function buildDiagnosticEmail(payload: DiagnosticLeadPayload) {
         ctaIntro: "Quer dar o próximo passo? Escolha o canal mais rápido:",
         whatsapp: "Falar no WhatsApp",
         schedule: "Marcar call grátis",
-        footer: "Diagnóstico gerado pelo quiz em flywheel.dev",
+        footer: "Diagnóstico gerado pelo quiz em flyup.dev",
         signoff: "Um abraço,",
       }
     : {
-        subject: `Your Flywheel.dev diagnosis: ${s.title}`,
-        kicker: "Flywheel.dev — your diagnosis",
+        subject: `Your Flyup.dev diagnosis: ${s.title}`,
+        kicker: "Flyup.dev — your diagnosis",
         heading: "Here's your diagnosis 🎯",
         intro:
           "Based on your answers, the best-fit solution for where you are now is:",
@@ -451,7 +451,7 @@ export function buildDiagnosticEmail(payload: DiagnosticLeadPayload) {
         ctaIntro: "Want to take the next step? Pick the fastest channel:",
         whatsapp: "Chat on WhatsApp",
         schedule: "Book a free call",
-        footer: "Diagnosis generated by the quiz at flywheel.dev",
+        footer: "Diagnosis generated by the quiz at flyup.dev",
         signoff: "Cheers,",
       };
 
@@ -483,7 +483,7 @@ export function buildDiagnosticEmail(payload: DiagnosticLeadPayload) {
     `${t.schedule}: ${payload.calendlyUrl}`,
     ``,
     t.signoff,
-    `Flywheel.dev`,
+    `Flyup.dev`,
   ].join("\n");
 
   const html = `
@@ -537,7 +537,7 @@ export function buildDiagnosticEmail(payload: DiagnosticLeadPayload) {
               </td>
             </tr>
           </table>
-          <p style="margin:18px 0 0;">${t.signoff}<br/><strong>Flywheel.dev</strong></p>
+          <p style="margin:18px 0 0;">${t.signoff}<br/><strong>Flyup.dev</strong></p>
         </td>
       </tr>
       <tr>
@@ -569,7 +569,7 @@ export function buildQuizLeadEmail(payload: QuizLeadPayload) {
     .join("\n");
 
   const text = [
-    `Lead qualificado pelo quiz de diagnóstico (flywheel.dev)`,
+    `Lead qualificado pelo quiz de diagnóstico (flyup.dev)`,
     ``,
     `E-mail: ${payload.email}`,
     `Solução recomendada: ${payload.solutionTitle}`,
@@ -600,7 +600,7 @@ export function buildQuizLeadEmail(payload: QuizLeadPayload) {
     <table role="presentation" cellspacing="0" cellpadding="0" border="0" align="center" width="600" style="max-width:600px;background:#ffffff;border:1px solid #e4e4e7;border-radius:16px;overflow:hidden;">
       <tr>
         <td style="padding:24px 28px;border-bottom:1px solid #f4f4f5;">
-          <p style="margin:0;font-size:11px;font-family:ui-monospace,Menlo,Monaco,monospace;text-transform:uppercase;letter-spacing:0.12em;color:#71717a;">Flywheel.dev — lead qualificado (quiz)</p>
+          <p style="margin:0;font-size:11px;font-family:ui-monospace,Menlo,Monaco,monospace;text-transform:uppercase;letter-spacing:0.12em;color:#71717a;">Flyup.dev — lead qualificado (quiz)</p>
           <h1 style="margin:8px 0 0;font-size:22px;line-height:1.3;color:#0a0a0b;"><a href="mailto:${escapeHtml(payload.email)}" style="color:#4f46e5;text-decoration:none;">${escapeHtml(payload.email)}</a></h1>
         </td>
       </tr>
@@ -626,7 +626,7 @@ export function buildQuizLeadEmail(payload: QuizLeadPayload) {
       </tr>
       <tr>
         <td style="padding:16px 28px;border-top:1px solid #f4f4f5;background:#fafafa;color:#a1a1aa;font-size:12px;">
-          Prioridade: lead concluiu o diagnóstico no site flywheel.dev
+          Prioridade: lead concluiu o diagnóstico no site flyup.dev
         </td>
       </tr>
     </table>
@@ -639,17 +639,17 @@ export function buildQuizLeadEmail(payload: QuizLeadPayload) {
 
 export function buildLeadConfirmationEmail(payload: ContactPayload) {
   const firstName = payload.name.trim().split(" ")[0] || payload.name;
-  const subject = "Recebi a sua mensagem — Flywheel.dev";
+  const subject = "Recebi a sua mensagem — Flyup.dev";
 
   const text = [
     `Olá, ${firstName}!`,
     ``,
-    `Recebi a sua mensagem pelo site da Flywheel.dev e respondo pessoalmente em até 24 horas (em dias úteis) com um diagnóstico inicial.`,
+    `Recebi a sua mensagem pelo site da Flyup.dev e respondo pessoalmente em até 24 horas (em dias úteis) com um diagnóstico inicial.`,
     ``,
     `Se for urgente, é só chamar no WhatsApp.`,
     ``,
     `Um abraço,`,
-    `Flywheel.dev`,
+    `Flyup.dev`,
   ].join("\n");
 
   const html = `
@@ -659,7 +659,7 @@ export function buildLeadConfirmationEmail(payload: ContactPayload) {
     <table role="presentation" cellspacing="0" cellpadding="0" border="0" align="center" width="600" style="max-width:600px;background:#ffffff;border:1px solid #e4e4e7;border-radius:16px;overflow:hidden;">
       <tr>
         <td style="padding:28px 28px 8px;">
-          <p style="margin:0;font-size:11px;font-family:ui-monospace,Menlo,Monaco,monospace;text-transform:uppercase;letter-spacing:0.12em;color:#71717a;">Flywheel.dev</p>
+          <p style="margin:0;font-size:11px;font-family:ui-monospace,Menlo,Monaco,monospace;text-transform:uppercase;letter-spacing:0.12em;color:#71717a;">Flyup.dev</p>
           <h1 style="margin:10px 0 0;font-size:22px;line-height:1.3;color:#0a0a0b;">Recebi a sua mensagem, ${escapeHtml(firstName)} 👋</h1>
         </td>
       </tr>
@@ -667,12 +667,12 @@ export function buildLeadConfirmationEmail(payload: ContactPayload) {
         <td style="padding:8px 28px 24px;font-size:15px;line-height:1.65;color:#3f3f46;">
           <p style="margin:0 0 14px;">Obrigado pelo contacto! Respondo pessoalmente em <strong>até 24 horas</strong> (em dias úteis) com um diagnóstico inicial gratuito sobre o seu projeto.</p>
           <p style="margin:0 0 14px;">Enquanto isso, se preferir adiantar a conversa, é só me chamar no WhatsApp.</p>
-          <p style="margin:18px 0 0;">Um abraço,<br/><strong>Flywheel.dev</strong></p>
+          <p style="margin:18px 0 0;">Um abraço,<br/><strong>Flyup.dev</strong></p>
         </td>
       </tr>
       <tr>
         <td style="padding:16px 28px;border-top:1px solid #f4f4f5;background:#fafafa;color:#a1a1aa;font-size:12px;">
-          Esta é uma confirmação automática do seu contacto em flywheel.dev
+          Esta é uma confirmação automática do seu contacto em flyup.dev
         </td>
       </tr>
     </table>

@@ -39,7 +39,7 @@ export default function OgImage() {
               color: "#0a0a0b",
             }}
           >
-            Flywheel<span style={{ color: "#a1a1aa" }}>.dev</span>
+            Flyup<span style={{ color: "#a1a1aa" }}>.dev</span>
           </div>
         </div>
 

@@ -1,6 +1,6 @@
-# Flywheel.dev — site institucional
+# Flyup.dev — site institucional
 
-Site institucional da Flywheel.dev: consultoria e desenvolvimento de tecnologia
+Site institucional da Flyup.dev: consultoria e desenvolvimento de tecnologia
 à medida (sites, aplicações e hubs de gestão) para pequenas e médias empresas.
 
 Construído com **Next.js 16 (App Router + Turbopack)**, **React 19**,

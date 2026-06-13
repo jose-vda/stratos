@@ -4,7 +4,7 @@ import { siteConfig } from "@/lib/site";
 export const metadata: Metadata = {
   title: "Política de Privacidade",
   description:
-    "Como a Flywheel.dev recolhe, usa e protege os seus dados pessoais, em conformidade com o RGPD.",
+    "Como a Flyup.dev recolhe, usa e protege os seus dados pessoais, em conformidade com o RGPD.",
   alternates: { canonical: "/privacidade" },
 };
 

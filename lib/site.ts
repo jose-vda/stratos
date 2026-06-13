@@ -12,18 +12,18 @@
 //      revisado juridicamente.
 // ─────────────────────────────────────────────────────────────────────────
 export const siteConfig = {
-  name: "Flywheel.dev",
+  name: "Flyup.dev",
   tagline: "Tecnologia à medida para o seu negócio crescer",
   description:
     "Arquitetamos, desenvolvemos e implementamos sites, aplicações e hubs de gestão para pequenas e médias empresas. Da ideia ao impacto.",
-  url: process.env.NEXT_PUBLIC_SITE_URL ?? "https://flywheel.dev",
-  author: "Flywheel",
+  url: process.env.NEXT_PUBLIC_SITE_URL ?? "https://flyup.dev",
+  author: "Flyup",
   whatsappNumber: process.env.NEXT_PUBLIC_WHATSAPP_NUMBER ?? "351912345678",
   whatsappMessage:
-    "Olá! Vim pelo site da Flywheel.dev e gostaria de conversar sobre um projeto.",
+    "Olá! Vim pelo site da Flyup.dev e gostaria de conversar sobre um projeto.",
   calendlyUrl:
     process.env.NEXT_PUBLIC_CALENDLY_URL ??
-    "https://calendly.com/flywheel-dev/diagnostico",
+    "https://calendly.com/flyup-dev/diagnostico",
   // Recompensa por concluir o diagnóstico: código de voucher exibido no ecrã
   // e enviado no e-mail. Texto livre — configure a condição real via env.
   quizVoucher: {
@@ -35,7 +35,7 @@ export const siteConfig = {
       process.env.NEXT_PUBLIC_QUIZ_VOUCHER_EN ??
       "10% off your first project",
   },
-  email: process.env.NEXT_PUBLIC_CONTACT_EMAIL ?? "contacto@flywheel.dev",
+  email: process.env.NEXT_PUBLIC_CONTACT_EMAIL ?? "contacto@flyup.dev",
   socials: {
     linkedin: process.env.NEXT_PUBLIC_SOCIAL_LINKEDIN ?? "https://www.linkedin.com/",
     github: process.env.NEXT_PUBLIC_SOCIAL_GITHUB ?? "https://github.com/",

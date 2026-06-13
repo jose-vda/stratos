@@ -3,7 +3,7 @@
 import * as React from "react";
 import { dict, type Lang, type Dict } from "@/lib/i18n";
 
-const STORAGE_KEY = "flywheel:lang";
+const STORAGE_KEY = "flyup:lang";
 
 type LanguageContextValue = {
   lang: Lang;
