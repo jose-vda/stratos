@@ -358,7 +358,6 @@ const pt = {
     badge: "A minha história com código",
     h1Pre: "Comecei a programar na 42Lisboa",
     h1Accent: "e nunca mais parei",
-    subtitle: "Comecei na 42Lisboa. O resto foi consequência.",
     storyKicker: "01 — A minha história",
     storyTitle: "Da 42Lisboa ao código com propósito",
     paragraphs: [
@@ -748,7 +747,6 @@ const en: typeof pt = {
     badge: "My story with code",
     h1Pre: "I started coding at 42Lisboa",
     h1Accent: "and never stopped",
-    subtitle: "Started at 42Lisboa. The rest followed.",
     storyKicker: "01 — My story",
     storyTitle: "From 42Lisboa to code with purpose",
     paragraphs: [

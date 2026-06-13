@@ -152,13 +152,6 @@ export function AboutHero() {
           <span className="text-brand-gradient-shimmer">{t.about.h1Accent}</span>
         </motion.h1>
 
-        {/* Sub */}
-        <motion.p
-          variants={item}
-          className="mx-auto mt-6 max-w-xl text-pretty text-base leading-relaxed text-muted-foreground md:text-lg"
-        >
-          {t.about.subtitle}
-        </motion.p>
       </motion.div>
     </section>
   );
