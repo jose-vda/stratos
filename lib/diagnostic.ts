@@ -41,20 +41,12 @@ const quizQuestions: QuizQuestion[] = [
           pt: "Ter presença digital e atrair clientes",
           en: "Build a digital presence and attract clients",
         },
-        description: {
-          pt: "Um site ou landing que comunique autoridade e converta.",
-          en: "A site or landing that conveys authority and converts.",
-        },
         scores: { site: 3 },
       },
       {
         label: {
           pt: "Resolver um problema com um sistema à medida",
           en: "Solve a problem with a custom system",
-        },
-        description: {
-          pt: "Uma ferramenta que faz exatamente o que o meu negócio precisa.",
-          en: "A tool that does exactly what my business needs.",
         },
         scores: { app: 3, hub: 1 },
       },
@@ -63,20 +55,12 @@ const quizQuestions: QuizQuestion[] = [
           pt: "Organizar a gestão e os dados num lugar só",
           en: "Organize management and data in one place",
         },
-        description: {
-          pt: "Centralizar operação, clientes, finanças e relatórios.",
-          en: "Centralize operations, clients, finances and reports.",
-        },
         scores: { hub: 3, app: 1 },
       },
       {
         label: {
           pt: "Eliminar trabalho manual repetitivo",
           en: "Eliminate repetitive manual work",
-        },
-        description: {
-          pt: "Conectar ferramentas e automatizar tarefas que tomam tempo.",
-          en: "Connect tools and automate time-consuming tasks.",
         },
         scores: { automation: 3 },
       },
